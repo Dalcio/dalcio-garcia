@@ -9,12 +9,10 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Head>
-        <title>Homepage</title>
+        <title>Dálcio Garcia</title>
       </Head>
-
-      <RocketseatLogo />
-      <h1>ReactJS Structure</h1>
-      <p>A ReactJS + Next.js structure made by Rocketseat.</p>
+      <h1>Hi!! I am Dálcio Garcia</h1>
+      <p>Thanks for your visit, I will be ready soon</p>
     </Container>
   )
 }
