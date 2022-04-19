@@ -1,20 +1,16 @@
-import React from 'react'
-import Head from 'next/head'
-
-import RocketseatLogo from '../assets/rocketseat.svg'
-
-import { Container } from '../styles/pages/Home'
+import React from "react";
+import Head from "next/head";
 
 const Home: React.FC = () => {
   return (
-    <Container>
+    <div>
       <Head>
         <title>Dálcio Garcia</title>
       </Head>
       <h1>Hi!! I am Dálcio Garcia Development branch</h1>
       <p>Thanks for your visit, I will be ready soon</p>
-    </Container>
-  )
-}
+    </div>
+  );
+};
 
-export default Home
+export default Home;
