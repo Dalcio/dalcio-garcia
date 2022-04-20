@@ -10,6 +10,6 @@ export default createGlobalStyle`
   body {
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
-    font-family: Bitter, serif;
+    font: 16px Bitter, serif;
   }
 `;

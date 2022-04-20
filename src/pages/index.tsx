@@ -1,15 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import Layout from '@layout'
+import Layout from "@layout";
 
 const Home: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Dálcio Garcia</title>
+        <title>Dálcio Garcia - Frontend Developer</title>
       </Head>
-      <h1>Hi!! I am Dálcio Garcia Development branch</h1>
-      <p>Thanks for your visit, I will be ready soon</p>
+      <h1>Home Page</h1>
     </Layout>
   );
 };

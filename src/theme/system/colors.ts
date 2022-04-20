@@ -11,8 +11,8 @@ const colors = {
   home: "#ddeaf6",
   about: "#fff2cc",
   articles: "#d5dbe5",
-  works: "#d8e2f3",
-  skills: "#ededed"
+  works: "#d8e2f3"
+  // skills: "#ededed"
 };
 
 export default colors;
