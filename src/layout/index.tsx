@@ -1,7 +1,9 @@
-const Layout = ({ children }) => {
-  return <div>
-    {children}
-  </div>
-}
+import { FC } from "react";
 
-export default Layout
+import { LayoutProps } from "./types";
+
+const Layout: FC<LayoutProps> = ({ home, children }) => {
+  return <div>{children}</div>;
+};
+
+export default Layout;
