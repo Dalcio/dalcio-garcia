@@ -1,7 +1,11 @@
-import { colors } from "./system";
+import { Theme } from './styled';
 
-const theme = {
-  colors,
+import colors from './system/colors';
+import space from './system/space';
+
+const theme: Theme = {
+	colors,
+	space
 };
 
 export default theme;

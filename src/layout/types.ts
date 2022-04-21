@@ -1,3 +1,6 @@
+import { RouteColorName } from '@theme/system/colors.types';
+
 export interface LayoutProps {
-  home?: boolean;
+	home?: boolean;
+	bg: RouteColorName;
 }

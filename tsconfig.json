@@ -25,6 +25,9 @@
       "@components/*": [
         "components/*"
       ],
+      "@constants/*": [
+        "constants/*"
+      ],
       "@app-state": [
         "app-state"
       ],

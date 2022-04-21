@@ -1,18 +1,20 @@
-const colors = {
-  text: "#404040",
+import { Colors } from './colors.types';
 
-  primary: "#3f3f3f",
+const colors: Colors = {
+	text: '#000000',
 
-  white: "#ffffff",
+	primary: '#3f3f3f',
 
-  menu: "#e1efd8",
+	white: '#ffffff',
 
-  // ppages colors
-  home: "#ddeaf6",
-  about: "#fff2cc",
-  articles: "#d5dbe5",
-  works: "#d8e2f3"
-  // skills: "#ededed"
+	menu: '#e1efd8',
+
+	// ppages colors
+	home: '#ddeaf6',
+	about: '#fff2cc',
+	articles: '#d5dbe5',
+	works: '#d8e2f3'
+	// skills: "#ededed"
 };
 
 export default colors;
