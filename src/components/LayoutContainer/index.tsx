@@ -1,16 +1,15 @@
 import { LayoutProps } from '@layout/types';
 import { FC, useRef } from 'react';
-import { InnertLayoutWrapper, OuterLayoutWrapper } from './wrappers';
+
+import LayoutWrapper from './LayoutWrapper';
 
 const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
 	const innerWrapperRef = useRef(null);
 
 	return (
-		<OuterLayoutWrapper home={home} bg={bg}>
-			<InnertLayoutWrapper ref={innerWrapperRef} bg={bg}>
-				{children}
-			</InnertLayoutWrapper>
-		</OuterLayoutWrapper>
+		<LayoutWrapper home={home} ref={innerWrapperRef} bg={bg}>
+			{children}
+		</LayoutWrapper>
 	);
 };
 
