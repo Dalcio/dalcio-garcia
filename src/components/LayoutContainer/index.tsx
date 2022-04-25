@@ -21,7 +21,7 @@ const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
 			ref={innerWrapperRef}
 			bg={bg}
 		>
-			<div className="layout-inner-wrapper">{children}</div>
+			{children}
 		</LayoutWrapper>
 	);
 };

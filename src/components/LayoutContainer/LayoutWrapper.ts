@@ -3,51 +3,49 @@ import styled from 'styled-components';
 import { InnerLayoutWrapperProps } from './types';
 
 const LayoutWrapper = styled.div<InnerLayoutWrapperProps>`
-	overflow-y: auto;
+	background: ${({ bg, theme }) => theme.colors[bg]};
 
-	.layout-inner-wrapper {
-		position: relative;
-		min-height: 100%;
-		background: ${({ bg, theme }) => theme.colors[bg]};
+	&:after {
+		content: '';
+		position: fixed;
+		background: ${({ theme }) => theme.colors.white};
+		z-index: 1;
+		inset: 0;
 	}
 
 	${({ home, bg, theme: { colors, space } }) =>
 		(home &&
 			`
-      height: calc(100vh - ${space.md});
-      padding: ${space.md} ${space.md} 0;
-		`) ||
+			margin: ${space.md};
+			min-height: calc(100vh - 2 * ${space.md});
+			
+			&:after {
+				top: calc(100vh - ${space.md});
+				height: ${space.md};
+			}
+			`) ||
 		`
-      height: calc(100vh - 3 * ${space.sm});
-      margin-top:  calc(2 * ${space.sm});
-      // padding: 0 ${space.sm};
-      // padding-left: calc( ${space.sm});
-
-      .layout-inner-wrapper {
-        margin: 0 ${space.sm};
-        // margin-right: ${space.sm};
-      }
-
+			margin: ${space.sm};
+			margin-top: calc(2 * ${space.sm});;
+			min-height: calc(100vh - 1px - 3 * ${space.sm});
+			position: relative;
+			
 			&::before {
 				content: '';
-				background: ${colors[bg]};
-				position: absolute;
+				position: absolute;				
+				border: 1px solid ${colors[bg]};
 				z-index: -1;
-
-				inset  ${space.sm};
-				left: calc(2 * ${space.sm});
-				right calc(3 * ${space.sm});
-			}
-
-			&::after {
-				content: '';
-				position: absolute;
-				z-index: 1;
-        top: calc( 2 * ${space.sm});
+				top: -${space.sm};
+				right: ${space.sm};
 				left: ${space.sm};
-				right calc( ${space.sm});
-        border-top: 1px solid ${colors.white};
+				height: ${space.sm};				
+			}		
+					
+			&:after {
+				top: calc(100vh - ${space.sm});
+				height: ${space.sm};
 			}
+
 		`};
 `;
 
