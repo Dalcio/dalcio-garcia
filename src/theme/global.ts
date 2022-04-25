@@ -9,7 +9,8 @@ export default createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.colors.text}; 
+    color: ${(props) => props.theme.colors.text};
     font: 16px Bitter, serif;
+    overflow: hidden;
   }
 `;

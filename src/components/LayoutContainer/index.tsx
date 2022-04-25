@@ -1,14 +1,27 @@
 import { LayoutProps } from '@layout/types';
-import { FC, useRef } from 'react';
+import { FC, ReactNode, UIEvent, useEffect, useRef } from 'react';
 
 import LayoutWrapper from './LayoutWrapper';
 
 const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
-	const innerWrapperRef = useRef(null);
+	const innerWrapperRef = useRef<HTMLDivElement>(null);
+
+	const onScroll = (e: UIEvent<ReactNode>) => {
+		console.log('Scroll');
+		if (innerWrapperRef.current) {
+			const clientY = innerWrapperRef.current.clientTop;
+			console.log(clientY);
+		}
+	};
 
 	return (
-		<LayoutWrapper home={home} ref={innerWrapperRef} bg={bg}>
-			{children}
+		<LayoutWrapper
+			onScroll={onScroll}
+			home={home}
+			ref={innerWrapperRef}
+			bg={bg}
+		>
+			<div className="layout-inner-wrapper">{children}</div>
 		</LayoutWrapper>
 	);
 };

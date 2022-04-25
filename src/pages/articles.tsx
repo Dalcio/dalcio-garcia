@@ -1,6 +1,7 @@
-import React from 'react';
+import ArticlesBody from '@components/articles';
 import Head from 'next/head';
 import Layout from '@layout';
+import React from 'react';
 
 const Articles: React.FC = () => {
 	return (
@@ -8,7 +9,7 @@ const Articles: React.FC = () => {
 			<Head>
 				<title>Dálcio Garcia</title>
 			</Head>
-			<h1>Articles</h1>
+			<ArticlesBody />
 		</Layout>
 	);
 };
