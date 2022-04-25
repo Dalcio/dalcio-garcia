@@ -3,12 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import { InnerLayoutWrapperProps } from './types';
 
 export const fadeOut = keyframes`
-	content: '';
-	position: fixed;
-	background: ${({ theme }) => theme.colors.white};
-	z-index: 1;
-	inset: 0;
-	
 	from {		
 		height: ${({ home, theme }) => theme.space[home ? 'md' : 'sm']};
 		background: ${({ bg, theme }) => theme.colors.white};
@@ -23,11 +17,13 @@ const LayoutWrapper = styled.div<InnerLayoutWrapperProps>`
 	background: ${({ bg, theme }) => theme.colors[bg]};
 
 	&.not-scrolled {
-		content: '';
-		position: fixed;
-		background: ${({ theme }) => theme.colors.white};
-		z-index: 1;
-		inset: 0;
+		&:after {
+			content: '';
+			position: fixed;
+			background: ${({ theme }) => theme.colors.white};
+			z-index: 1;
+			inset: 0;
+		}
 
 		${({ home, bg, theme: { colors, space } }) =>
 			(home &&
@@ -67,7 +63,6 @@ const LayoutWrapper = styled.div<InnerLayoutWrapperProps>`
 
 	&.scrolled {
 		&:after {
-			animation: ${fadeOut} 3s ease-in;
 		}
 	}
 `;
