@@ -1,52 +1,75 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { InnerLayoutWrapperProps } from './types';
+
+export const fadeOut = keyframes`
+	content: '';
+	position: fixed;
+	background: ${({ theme }) => theme.colors.white};
+	z-index: 1;
+	inset: 0;
+	
+	from {		
+		height: ${({ home, theme }) => theme.space[home ? 'md' : 'sm']};
+		background: ${({ bg, theme }) => theme.colors.white};
+	}
+	to {
+		height: 0;
+		background: ${({ bg, theme }) => theme.colors[bg]};
+	}
+`;
 
 const LayoutWrapper = styled.div<InnerLayoutWrapperProps>`
 	background: ${({ bg, theme }) => theme.colors[bg]};
 
-	&:after {
+	&.not-scrolled {
 		content: '';
 		position: fixed;
 		background: ${({ theme }) => theme.colors.white};
 		z-index: 1;
 		inset: 0;
-	}
 
-	${({ home, bg, theme: { colors, space } }) =>
-		(home &&
-			`
+		${({ home, bg, theme: { colors, space } }) =>
+			(home &&
+				`
 			margin: ${space.md};
 			min-height: calc(100vh - 2 * ${space.md});
-			
+
 			&:after {
 				top: calc(100vh - ${space.md});
 				height: ${space.md};
 			}
 			`) ||
-		`
+			`
 			margin: ${space.sm};
 			margin-top: calc(2 * ${space.sm});;
 			min-height: calc(100vh - 1px - 3 * ${space.sm});
 			position: relative;
-			
+
 			&::before {
 				content: '';
-				position: absolute;				
+				position: absolute;
 				border: 1px solid ${colors[bg]};
 				z-index: -1;
 				top: -${space.sm};
 				right: ${space.sm};
 				left: ${space.sm};
-				height: ${space.sm};				
-			}		
-					
+				height: ${space.sm};
+			}
+
 			&:after {
 				top: calc(100vh - ${space.sm});
 				height: ${space.sm};
 			}
 
 		`};
+	}
+
+	&.scrolled {
+		&:after {
+			animation: ${fadeOut} 3s ease-in;
+		}
+	}
 `;
 
 export default LayoutWrapper;

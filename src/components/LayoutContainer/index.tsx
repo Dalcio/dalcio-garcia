@@ -1,24 +1,28 @@
 import { LayoutProps } from '@layout/types';
-import { FC, ReactNode, UIEvent, useEffect, useRef } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import LayoutWrapper from './LayoutWrapper';
 
 const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
-	const innerWrapperRef = useRef<HTMLDivElement>(null);
+	const [scrolled, setScrolled] = useState(false);
 
-	const onScroll = (e: UIEvent<ReactNode>) => {
-		console.log('Scroll');
-		if (innerWrapperRef.current) {
-			const clientY = innerWrapperRef.current.clientTop;
-			console.log(clientY);
-		}
-	};
+	useEffect(() => {
+		const onScroll = () => {
+			const scrollY = window.scrollY;
+
+			if (scrollY > 10 && !scrolled) {
+				setScrolled(true);
+			} else if (scrollY <= 10 && scrolled) {
+				setScrolled(false);
+			}
+		};
+		document.addEventListener('scroll', onScroll);
+	}, [scrolled]);
 
 	return (
 		<LayoutWrapper
-			onScroll={onScroll}
 			home={home}
-			ref={innerWrapperRef}
+			className={scrolled ? 'scrolled' : 'not-scrolled'}
 			bg={bg}
 		>
 			{children}
