@@ -1,3 +1,3 @@
-import { timing } from './animations';
+import { durations } from './animations';
 
-export type Timing = typeof timing;
+export type Duration = typeof durations;

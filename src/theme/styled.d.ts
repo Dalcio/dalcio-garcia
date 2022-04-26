@@ -2,14 +2,14 @@
 
 import 'styled-components';
 
-import { Timing } from './system/animations.types';
+import { Duration } from './system/animations.types';
 import { Colors } from './system/colors.types';
 import { SpaceProps } from './system/space.types';
 
 export type Theme = {
 	colors: Colors;
 	space: SpaceProps;
-	timing: Timing;
+	durations: Duration;
 };
 
 declare module 'styled-components' {

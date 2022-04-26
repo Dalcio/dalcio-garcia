@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { fadeOut, slideToTop } from './animations';
 import { LayoutWrapperProps, NotHomeProps } from './types';
 
-const notHome: NotHomeProps = ({ space, colors, bg, timing }) => css`
+const notHome: NotHomeProps = ({ space, colors, bg, durations }) => css`
 	margin: ${space.sm};
 	margin-top: calc(2 * ${space.sm});
 	min-height: calc(100vh - 1px - 3 * ${space.sm});
@@ -19,13 +19,13 @@ const notHome: NotHomeProps = ({ space, colors, bg, timing }) => css`
 		left: ${space.sm};
 		height: ${space.sm};
 
-		animation: ${slideToTop(space.sm)} ${timing[3]} ease-in;
+		animation: ${slideToTop(space.sm)} ${durations[3]} ease-in;
 	}
 `;
 
 const LayoutWrapper = styled.div<LayoutWrapperProps>`
 	background: ${({ bg, theme }) => theme.colors[bg]};
-	transition: margin ${({ theme }) => theme.timing[3]} ease-in;
+	transition: margin ${({ theme }) => theme.durations[3]} ease-in;
 
 	&:after {
 		content: '';
@@ -38,19 +38,19 @@ const LayoutWrapper = styled.div<LayoutWrapperProps>`
 	}
 
 	&.not-scrolled {
-		${({ home, bg, theme: { colors, space, timing } }) =>
+		${({ home, bg, theme: { colors, space, durations } }) =>
 			(home &&
 				css`
 					margin: ${space.md};
 					min-height: calc(100vh - 2 * ${space.md});
 				`) ||
-			notHome({ space, colors, bg, timing })};
+			notHome({ space, colors, bg, durations })};
 	}
 
 	&.scrolled:after {
 		position: static;
-		${({ home, bg, theme: { colors, space, timing } }) => css`
-			animation: ${fadeOut({ space, colors, bg, home })} ${timing[3]} ease-in;
+		${({ home, bg, theme: { colors, space, durations } }) => css`
+			animation: ${fadeOut({ space, colors, bg, home })} ${durations[3]} ease-in;
 		`}
 	}
 `;

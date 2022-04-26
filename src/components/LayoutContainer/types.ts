@@ -1,4 +1,4 @@
-import { Timing } from '@theme/system/animations.types';
+import { Duration } from '@theme/system/animations.types';
 import { Colors, RouteColorName } from '@theme/system/colors.types';
 import { SpaceProps } from '@theme/system/space.types';
 import { FlattenSimpleInterpolation } from 'styled-components';
@@ -13,7 +13,7 @@ type NotHomeParams = {
 	colors: Colors;
 	bg: RouteColorName;
 	home?: boolean;
-	timing?: Timing;
+	durations?: Duration;
 };
 
 export type NotHomeProps<T = FlattenSimpleInterpolation> = (
