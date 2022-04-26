@@ -1,16 +1,17 @@
+import { Theme } from '@theme/styled';
 import styled, { css } from 'styled-components';
 
-import { apeerLetter, strechLeftRight } from './animations';
+import { apeerLetter } from './animations';
 
 import getFoourSpanWithAnimationDelay from './getFoourSpanWithAnimationDelay';
 
-const btnCloseCss = css`
+const btnCloseCss = (theme: Theme) => css`
 	& > .btn-close {
 		display: inline-block;
 		overflow: hidden;
 		font: bold small-caps normal 12px Arial, Helvetica, sans-serif;
 		letter-spacing: 3px;
-		transition: font-size 100ms ease-in;
+		transition: font-size ${theme.durations[1]} ease-in;
 
 		&:hover {
 			font-size: 13px;
@@ -18,39 +19,43 @@ const btnCloseCss = css`
 
 		& > span {
 			display: inline-block;
-			animation: ${apeerLetter} 200ms ease-in-out;
+			animation: ${apeerLetter} ${theme.durations[2]} ease-in-out;
 		}
 
 		${getFoourSpanWithAnimationDelay()}
 	}
 `;
 
-const btnOpenCss = css`
+const btnOpenCss = (theme: Theme) => css`
 	& > .btn-open {
 		overflow: hidden;
 		display: grid;
-		row-gap: 5px;
+		row-gap: ${theme.space.sm};
 
 		& > div {
-			width: 30px;
-			height: 4px;
-			background: #000;
+			width: 14px;
+			height: 3px;
+			background: ${theme.colors.primary};
+			transition: transform 1s ease;
 		}
 
-		& > div:not(:nth-of-type(2)) {
-			width: 18px;
-			animation: ${strechLeftRight} 2s ease infinite alternate-reverse;
+		& > div:nth-of-type(2) {
+			width: 26px;
 		}
 
-		& > div:nth-of-type(3) {
-			animation-direction: alternate;
+		& > div:first-of-type {
+			transform: translatex(12px);
 		}
 
 		&:hover {
 			& > div {
-				transition: width 1s ease;
-				width: 30px;
-				animation: none;
+				transform: scaleX(2);
+				transform-origin: left center;
+			}
+
+			& > div:first-of-type {
+				transform-origin: right center;
+				transform: translatex(12px) scaleX(2);
 			}
 		}
 	}
@@ -59,12 +64,12 @@ const btnOpenCss = css`
 export const MenuBtnContainer = styled.button`
 	cursor: pointer;
 	position: absolute;
-	top: ${({ theme }) => theme.space.md};
-	left: ${({ theme }) => theme.space.md};
+	top: ${({ theme }) => `calc(2 * ${theme.space.md})`};
+	left: ${({ theme }) => `calc(2 * ${theme.space.md})`};
 
 	background: none;
 	border: none;
 
-	${btnCloseCss}
-	${btnOpenCss}
+	${({ theme }) => btnCloseCss(theme)}
+	${({ theme }) => btnOpenCss(theme)}
 `;
