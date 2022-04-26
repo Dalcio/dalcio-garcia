@@ -1,69 +1,56 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import { InnerLayoutWrapperProps } from './types';
+import { fadeOut } from './animations';
+import { LayoutWrapperProps, NotHomeProps } from './types';
 
-export const fadeOut = keyframes`
-	from {		
-		height: ${({ home, theme }) => theme.space[home ? 'md' : 'sm']};
-		background: ${({ bg, theme }) => theme.colors.white};
-	}
-	to {
-		height: 0;
-		background: ${({ bg, theme }) => theme.colors[bg]};
+const notHome: NotHomeProps = ({ space, colors, bg, timing }) => css`
+	margin: ${space.sm};
+	margin-top: calc(2 * ${space.sm});
+	min-height: calc(100vh - 1px - 3 * ${space.sm});
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border: 1px solid ${colors[bg]};
+		z-index: -1;
+		top: -${space.sm};
+		right: ${space.sm};
+		left: ${space.sm};
+		height: ${space.sm};
+		transition: top ${timing[3]} ease-in;
 	}
 `;
 
-const LayoutWrapper = styled.div<InnerLayoutWrapperProps>`
+const LayoutWrapper = styled.div<LayoutWrapperProps>`
 	background: ${({ bg, theme }) => theme.colors[bg]};
+	transition: margin ${({ theme }) => theme.timing[3]} ease-in;
 
-	&.not-scrolled {
-		&:after {
-			content: '';
-			position: fixed;
-			background: ${({ theme }) => theme.colors.white};
-			z-index: 1;
-			inset: 0;
-		}
-
-		${({ home, bg, theme: { colors, space } }) =>
-			(home &&
-				`
-			margin: ${space.md};
-			min-height: calc(100vh - 2 * ${space.md});
-
-			&:after {
-				top: calc(100vh - ${space.md});
-				height: ${space.md};
-			}
-			`) ||
-			`
-			margin: ${space.sm};
-			margin-top: calc(2 * ${space.sm});;
-			min-height: calc(100vh - 1px - 3 * ${space.sm});
-			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				border: 1px solid ${colors[bg]};
-				z-index: -1;
-				top: -${space.sm};
-				right: ${space.sm};
-				left: ${space.sm};
-				height: ${space.sm};
-			}
-
-			&:after {
-				top: calc(100vh - ${space.sm});
-				height: ${space.sm};
-			}
-
-		`};
+	&:after {
+		content: '';
+		position: fixed;
+		background: ${({ theme }) => theme.colors.white};
+		z-index: 1;
+		inset: 0;
+		top: calc(100vh - ${({ home, theme }) => theme.space[home ? 'md' : 'sm']});
+		height: ${({ home, theme }) => theme.space[home ? 'md' : 'sm']};
 	}
 
-	&.scrolled {
-		&:after {
-		}
+	&.not-scrolled {
+		${({ home, bg, theme: { colors, space, timing } }) =>
+			(home &&
+				css`
+					margin: ${space.md};
+					min-height: calc(100vh - 2 * ${space.md});
+				`) ||
+			notHome({ space, colors, bg, timing })};
+	}
+
+	&.scrolled:after {
+		position: static;
+		${({ home, bg, theme: { colors, space, timing } }) => css`
+			animation: ${fadeOut({ space, colors, bg, home })} ${timing[3]} ease-in;
+		`}
 	}
 `;
 
