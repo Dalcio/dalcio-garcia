@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { fadeOut } from './animations';
+import { fadeOut, slideToTop } from './animations';
 import { LayoutWrapperProps, NotHomeProps } from './types';
 
 const notHome: NotHomeProps = ({ space, colors, bg, timing }) => css`
@@ -18,7 +18,8 @@ const notHome: NotHomeProps = ({ space, colors, bg, timing }) => css`
 		right: ${space.sm};
 		left: ${space.sm};
 		height: ${space.sm};
-		transition: top ${timing[3]} ease-in;
+
+		animation: ${slideToTop(space.sm)} ${timing[3]} ease-in;
 	}
 `;
 

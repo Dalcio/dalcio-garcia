@@ -20,3 +20,12 @@ export const fadeOut: NotHomeProps<Keyframes> = ({
 		background: ${colors[bg]};
 	}
 `;
+
+export const slideToTop = (top: string) => keyframes`
+	from {
+		top: 0;
+	}
+	to {
+		top: -${top};
+	}
+`;
