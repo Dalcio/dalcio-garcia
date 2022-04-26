@@ -16,11 +16,7 @@ const Menu = ({ home, current }: MenuProps) => {
 	return (
 		<MenuContainer home={home}>
 			<MenuBtn handleOpen={handleOpenMenu} open={open} />
-			{open && (
-				<MenuContent>
-					<h1>The content of menu just goes here</h1>
-				</MenuContent>
-			)}
+			{open && <MenuContent />}
 		</MenuContainer>
 	);
 };

@@ -4,7 +4,3 @@ export type MenuProps = {
 	current: RouteColorName;
 	home: boolean;
 };
-
-// export type MenuContentrops = {
-// 	home: boolean;
-// };
