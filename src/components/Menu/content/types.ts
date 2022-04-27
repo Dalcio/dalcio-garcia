@@ -4,3 +4,8 @@ export type MenuContentProps = {
 	// home: boolean;
 	current: RouteColorName;
 };
+
+export type MenuItemProps = {
+	current: RouteColorName;
+	name: RouteColorName;
+};
