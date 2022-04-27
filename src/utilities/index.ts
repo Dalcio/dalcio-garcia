@@ -1,1 +1,1 @@
-// export {default as } from ''
+export { default as getRouteName } from './getRouteName';

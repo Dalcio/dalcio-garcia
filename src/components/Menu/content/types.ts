@@ -1,4 +1,6 @@
-export type MenuContentrops = {
+import { RouteColorName } from '@theme/system/colors.types';
+
+export type MenuContentProps = {
 	// home: boolean;
-	// current:
+	current: RouteColorName;
 };

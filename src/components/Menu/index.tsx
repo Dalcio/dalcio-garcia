@@ -14,9 +14,7 @@ const Menu = ({ home, current }: MenuProps) => {
 	const [shouldShow, setShouldShow] = useState(false);
 
 	const handleOpenMenu = () => {
-		setShouldShow((prev) => !prev);
-
-		if (open) setOpen(false);
+		setShouldShow(true);
 
 		setTimeout(() => {
 			setShouldShow(false);
@@ -26,14 +24,10 @@ const Menu = ({ home, current }: MenuProps) => {
 
 	return (
 		<MenuContainer home={home}>
-			{(shouldShow && <PaintOpenner />) || (
-				<MenuBtn
-					handleOpen={handleOpenMenu}
-					open={open}
-					shouldShow={shouldShow}
-				/>
+			{(shouldShow && PaintOpenner) || (
+				<MenuBtn handleOpen={handleOpenMenu} open={open} />
 			)}
-			{open && <MenuContent />}
+			{open && <MenuContent current={current} />}
 		</MenuContainer>
 	);
 };

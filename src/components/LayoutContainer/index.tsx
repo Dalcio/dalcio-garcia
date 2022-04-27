@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from 'react';
 
 import LayoutWrapper from './LayoutWrapper';
 
-const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
+const LayoutContainer: FC<LayoutProps> = ({ home, current, children }) => {
 	const [scrolled, setScrolled] = useState<'not-scrolled' | 'scrolled'>(
 		'not-scrolled'
 	);
@@ -18,11 +18,12 @@ const LayoutContainer: FC<LayoutProps> = ({ home, bg, children }) => {
 				setScrolled('not-scrolled');
 			}
 		};
+
 		document.addEventListener('scroll', onScroll);
 	}, [scrolled]);
 
 	return (
-		<LayoutWrapper home={home} className={scrolled} bg={bg}>
+		<LayoutWrapper home={home} className={scrolled} bg={current}>
 			{children}
 		</LayoutWrapper>
 	);

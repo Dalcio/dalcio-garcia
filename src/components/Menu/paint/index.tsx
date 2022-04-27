@@ -1,6 +1,6 @@
 import { PaintContainer } from './styles';
 
-const PaintOpenner = () => (
+const PaintOpenner = (
 	<PaintContainer>
 		<div className="role-home" />
 		<div className="role-about" />

@@ -1,12 +1,15 @@
 import { LayoutContainer, Menu } from '@components';
-import { FC } from 'react';
+import { getRouteName } from '@utilities';
+import { useRouter } from 'next/dist/client/router';
 
-import { LayoutProps } from './types';
+const Layout = ({ children }) => {
+	const { pathname } = useRouter();
+	const home = pathname === '/';
+	const current = getRouteName(pathname.toLowerCase().substr(1));
 
-const Layout: FC<LayoutProps> = ({ home, bg, children }) => {
 	return (
-		<LayoutContainer home={home} bg={bg}>
-			<Menu home={home} current={bg} />
+		<LayoutContainer home={home} current={current}>
+			<Menu home={home} current={current} />
 			{children}
 		</LayoutContainer>
 	);
