@@ -7,7 +7,9 @@ export default globalCss({
 		color: '$text',
 		font: '$fontSizes$tiny $fonts$untitled',
 		height: '100vh',
-		display: 'flex',
+		display: 'grid',
+		justifyItems: 'center',
+		alignItems: 'center',
 		overflow: 'hidden',
 		padding: '$md',
 		// breakpoint
@@ -16,9 +18,12 @@ export default globalCss({
 		},
 		// root
 		'& > div': {
+			position: 'relative',
 			display: 'flex',
 			height: '100%',
-			width: '100%'
+			width: '100%',
+			maxWidth: '$w-max',
+			maxHeight: '$h-max'
 		}
 	}
 });

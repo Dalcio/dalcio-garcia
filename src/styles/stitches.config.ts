@@ -74,13 +74,13 @@ export const {
 			'w-2': '0.75rem',
 			'w-3': '1rem',
 			'w-4': '2rem',
-			'w-max': 'calc(100vh - 2 * $space$md)',
+			'w-max': '1440px',
 			'h-0': '0.25rem',
 			'h-1': '0.5rem',
 			'h-2': '0.75rem',
 			'h-3': '1rem',
 			'h-4': '2rem',
-			'h-max': 'calc(100vw - 2 * $space$md)'
+			'h-max': '1440px'
 		},
 		borders: {
 			'hand-drawn-1': '$borderWidths$border solid $colors$border',
