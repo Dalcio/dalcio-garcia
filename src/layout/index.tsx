@@ -1,18 +1,22 @@
-import { LayoutContainer, Menu } from '@components';
-import { getRouteName } from '@utilities';
-import { useRouter } from 'next/dist/client/router';
+import ROUTES, { Routes, RoutesKey } from '@constants/routes';
+import { useRouter } from 'next/router';
 
-const Layout = ({ children }) => {
+import LayoutContainer from './container';
+
+const getRouteName = (p: string): Routes =>
+	(ROUTES[p as RoutesKey] ?? ROUTES.home) as Routes;
+
+const useRoute = () => {
 	const { pathname } = useRouter();
-	const home = pathname === '/';
-	const current = getRouteName(pathname.toLowerCase().substr(1));
+	const route = getRouteName(pathname.toLowerCase().substr(1));
 
-	return (
-		<LayoutContainer home={home} current={current}>
-			<Menu home={home} current={current} />
-			{children}
-		</LayoutContainer>
-	);
+	return route as Routes;
 };
 
-export default Layout;
+export default function Layout({ children }) {
+	const currentRoute = useRoute();
+
+	return (
+		<LayoutContainer page={currentRoute as any}>{children}</LayoutContainer>
+	);
+}

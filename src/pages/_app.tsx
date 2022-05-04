@@ -1,17 +1,14 @@
 import { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
+import { globalConfigCss } from '@styles';
 
-import GlobalStyle from '@theme/global';
 import Layout from '@layout';
-import theme from '@theme';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-	<ThemeProvider theme={theme}>
+export default function MyApp({ Component, pageProps }: AppProps) {
+	globalConfigCss();
+
+	return (
 		<Layout>
 			<Component {...pageProps} />
 		</Layout>
-		<GlobalStyle />
-	</ThemeProvider>
-);
-
-export default MyApp;
+	);
+}

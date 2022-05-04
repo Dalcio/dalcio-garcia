@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { HomeBody, HomeHeader } from '@components/home';
 
-const Home = () => {
+export default function Home() {
 	return (
 		<>
 			<Head>
@@ -12,6 +12,4 @@ const Home = () => {
 			<HomeBody />
 		</>
 	);
-};
-
-export default Home;
+}

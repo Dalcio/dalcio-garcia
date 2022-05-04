@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const About = () => {
+export default function About() {
 	return (
 		<>
 			<Head>
@@ -9,6 +9,4 @@ const About = () => {
 			<h1>About Page Space</h1>
 		</>
 	);
-};
-
-export default About;
+}

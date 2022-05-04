@@ -1,11 +1,7 @@
-import styled from 'styled-components';
-
-export const HomeBodyContainer = styled.main`
-	height: 100vh;
-`;
-
-const HomeBody = () => {
-	return <HomeBodyContainer>Home Body</HomeBodyContainer>;
-};
-
-export default HomeBody;
+export default function HomeBody() {
+	return (
+		<div>
+			<h1>Home Body</h1>
+		</div>
+	);
+}
