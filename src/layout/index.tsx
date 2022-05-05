@@ -22,10 +22,12 @@ export default function Layout({ children }) {
 
 	return (
 		<LayoutWrapper>
-			<LayoutContainer page={currentRoute as any}>
-				<Header page={currentRoute as any} />
+			<LayoutContainer page={currentRoute}>
+				{/* <div> */}
+				<Header page={currentRoute} />
 				{children}
 				<HireMe />
+				{/* </div> */}
 			</LayoutContainer>
 		</LayoutWrapper>
 	);

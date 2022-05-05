@@ -1,3 +1,1 @@
-export { default as globalConfigCss } from './global';
-
-export * from './stitches.config';
+export { default as theme } from './theme';

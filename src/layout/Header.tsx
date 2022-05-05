@@ -1,44 +1,37 @@
 import { Button } from '@components/common';
-import { styled } from '@styles';
-import { pageVariants } from '@styles/variants';
+import { Routes } from '@constants/routes';
 
-import { PageVariantProps } from './Container';
+import styled from 'styled-components';
 
 import Menu from './Menu';
 
-const Container = styled('div', {
-	position: 'absolute',
-	inset: '$md',
-	'@bp1': {
-		inset: '$lg'
-	},
-	bottom: 'unset',
+const Container = styled.div<{ page: Routes }>(
+	({ page, theme: { colors, media, space } }) => ({
+		position: 'absolute',
+		inset: space.md,
+		[media.bp1]: {
+			inset: space.lg
+		},
+		bottom: 'unset!important',
 
-	display: 'flex',
-	justifyContent: 'space-between',
-	alignItems: 'center',
-
-	'& >.*': {
-		position: 'fixed'
-	},
-	variants: {
-		page: {
-			...pageVariants
+		display: 'flex',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		background: colors[page],
+		'& >.*': {
+			position: 'fixed'
 		}
-	},
-	defaultVariants: {
-		page: 'home'
-	}
-});
+	})
+);
 
-const Header = ({ page }: PageVariantProps) => (
+const Header = ({ page }: { page: Routes }) => (
 	<Container page={page}>
 		<Menu />
 		<Button
 			onClick={() => {
 				alert('Hi');
 			}}
-			page={page}
+			bg={page}
 		>
 			My Resume
 		</Button>

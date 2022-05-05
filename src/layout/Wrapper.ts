@@ -1,12 +1,11 @@
-import { styled } from '@styles';
+import styled from 'styled-components';
 
-const LayoutWrapper = styled('div', {
+const LayoutWrapper = styled.div({
 	height: '100vh',
 	widtht: '100vw',
 	display: 'flex',
 	justifyContent: 'center',
-	alignItems: 'center',
-	position: 'relative'
+	alignItems: 'center'
 });
 
 export default LayoutWrapper;
