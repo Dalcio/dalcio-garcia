@@ -12,8 +12,8 @@ const GlobalStyles = createGlobalStyle(
 			color: colors.text,
 			font: `'${fontSizes.tiny} ${fonts.untitled}`,
 			height: '100vh',
-			overflow: 'hidden',
-			padding: `calc(100% - 4 * ${space.md})`
+			// overflow: 'hidden',
+			padding: `calc(100vh - 4 * ${space.md}) calc(100vw - 4 * ${space.md})`
 		}
 	})
 );

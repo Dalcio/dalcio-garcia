@@ -19,6 +19,7 @@ const ButtonContainer = styled.button<ButtonProps>`
 		&:after {
 			content: '';
 			position: absolute;
+			z-index: 1;
 			width: 100%;
 			height: 100%;
 			bottom: -${space.sm};
@@ -44,7 +45,7 @@ const ButtonContainer = styled.button<ButtonProps>`
 			text-transform: uppercase;
 			text-align: center;
 			position: relative;
-			z-index: 1;
+			z-index: 2;
 			background: ${colors[ROUTES[bg] ?? 'home']};
 			border: ${borders['hand-drawn-1']};
 		}
