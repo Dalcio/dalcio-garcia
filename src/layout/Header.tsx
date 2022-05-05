@@ -1,25 +1,47 @@
+import { Button } from '@components/common';
 import { styled } from '@styles';
+import { pageVariants } from '@styles/variants';
+
+import { PageVariantProps } from './Container';
+
+import Menu from './Menu';
 
 const Container = styled('div', {
 	position: 'absolute',
-	inset: 'calc(2 * $md)',
+	inset: '$md',
+	'@bp1': {
+		inset: '$lg'
+	},
 	bottom: 'unset',
-	// width: '100%',
-	background: 'green',
 
 	display: 'flex',
 	justifyContent: 'space-between',
 	alignItems: 'center',
 
-	'& >..download-cv': {
+	'& >.*': {
 		position: 'fixed'
+	},
+	variants: {
+		page: {
+			...pageVariants
+		}
+	},
+	defaultVariants: {
+		page: 'home'
 	}
 });
 
-const Header = () => (
-	<Container>
-		<h1>MenuF</h1>
-		<button className="download-cv">Download CV</button>
+const Header = ({ page }: PageVariantProps) => (
+	<Container page={page}>
+		<Menu />
+		<Button
+			onClick={() => {
+				alert('Hi');
+			}}
+			page={page}
+		>
+			My Resume
+		</Button>
 	</Container>
 );
 

@@ -1,8 +1,8 @@
 enum ROUTES {
-	about = 'about',
-	community = 'community',
-	home = 'home',
 	'/' = 'home',
+	about = 'about',
+	articles = 'articles',
+	home = 'home',
 	work = 'work'
 }
 

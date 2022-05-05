@@ -1,46 +1,61 @@
 import { styled } from '@styles';
+import { pageVariants } from '@styles/variants';
 import type * as Stitches from '@stitches/react';
 
 const LayoutContainer = styled('div', {
-	width: '100%',
+	width: 'calc(100% - 4 * $space$md)',
+	height: 'calc(100% - 4 * $space$md)',
+	maxWidth: '$w-max',
+	maxHeight: '$h-max',
+	border: '$borders$hand-drawn-1',
 	position: 'relative',
-	border: '$borders$hand-drawn-2',
-	borderRadius: '$hand-drawn',
 	padding: '$md',
 	'@bp1': {
 		padding: '$lg'
 	},
-	'&:after': {
-		$$inset: 'calc($space$md - 2px)',
+	'&:after, &:before': {
 		content: '',
+		$$inset: '$space$md',
 		position: 'absolute',
+		zIndex: '-1',
 		height: '100%',
 		width: '100%',
+		border: '$borders$hand-drawn-1'
+	},
+	'&:before': {
+		bottom: '-$$inset',
+		right: '-$$inset'
+	},
+	'&:after': {
 		top: '-$$inset',
-		right: '-$$inset',
-		border: '$borders$hand-drawn-2',
-		borderRadius: '$hand-drawn'
+		left: '-$$inset',
+		background: '$home'
 	},
 	variants: {
 		page: {
-			home: {
-				background: '$home'
-			},
-			community: {
-				background: '$community'
+			...pageVariants,
+			articles: {
+				'&:after': {
+					background: '$articles'
+				}
 			},
 			about: {
-				background: '$about'
+				'&:after': {
+					background: '$about'
+				}
 			},
 			work: {
-				background: '$work'
+				'&:after': {
+					background: '$work'
+				}
 			}
 		}
+	},
+	defaultVariants: {
+		page: 'home'
 	}
 });
 
-export type LayoutContainerVariantProps = Stitches.VariantProps<
-	typeof LayoutContainer
->;
+export type PageVariantProps = Stitches.VariantProps<typeof LayoutContainer>;
 
 export default LayoutContainer;

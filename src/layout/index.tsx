@@ -3,6 +3,7 @@ import ROUTES, { Routes, RoutesKey } from '@constants/routes';
 import { useRouter } from 'next/router';
 
 import LayoutContainer from './Container';
+import LayoutWrapper from './Wrapper';
 import Header from './Header';
 import HireMe from './HireMe';
 
@@ -20,10 +21,12 @@ export default function Layout({ children }) {
 	const currentRoute = useRoute();
 
 	return (
-		<LayoutContainer page={currentRoute as any}>
-			<Header />
-			{children}
-			<HireMe />
-		</LayoutContainer>
+		<LayoutWrapper>
+			<LayoutContainer page={currentRoute as any}>
+				<Header page={currentRoute as any} />
+				{children}
+				<HireMe />
+			</LayoutContainer>
+		</LayoutWrapper>
 	);
 }
