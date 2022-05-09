@@ -3,14 +3,7 @@ import { Theme } from '@styles/theme';
 
 import styled, { css } from 'styled-components';
 
-const borderAxys = ({
-	space,
-	colors,
-	sizes,
-	zIndices,
-	borders,
-	media
-}: Theme) => css`
+const borderAxys = ({ space, zIndices, borders }: Theme) => css`
 	& > .border-axys {
 		position: fixed;
 		inset: calc(2 * ${space.md});
@@ -40,13 +33,17 @@ const borderAxys = ({
 		border-top: ${borders['hand-drawn-1']};
 	}
 
+	& > .border-y {
+		bottom: unset;
+	}
+
 	& > .border-y:after {
 		top: unset;
 	}
 `;
 
 const diagonalAxys = (
-	{ space, colors, sizes, zIndices, borders, media }: Theme,
+	{ space, colors, zIndices, borders }: Theme,
 	page: Routes
 ) => css`
 	& > .diagonal-axys {

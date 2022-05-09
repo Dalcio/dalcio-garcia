@@ -8,7 +8,6 @@ export type ButtonProps = {
 
 const ButtonContainer = styled.button<ButtonProps>`
 	${({ size, bg, theme: { colors, space, borders, letterSpacings } }) => css`
-		position: relative;
 		background: none;
 		cursor: pointer;
 		outline: none;

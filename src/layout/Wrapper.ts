@@ -7,6 +7,7 @@ const LayoutWrapper = styled.div<{ page: Routes }>(
 		padding: calc(2 * ${space.md});
 		display: flex;
 		justify-content: center;
+		background: ${colors[ROUTES[page] ?? 'home']};
 
 		&:before,
 		&:after {

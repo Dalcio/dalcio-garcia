@@ -3,7 +3,7 @@ enum ROUTES {
 	about = 'about',
 	articles = 'articles',
 	home = 'home',
-	work = 'work'
+	works = 'works'
 }
 
 export type Routes = keyof typeof ROUTES;

@@ -1,48 +1,50 @@
 import { Button } from '@components/common';
-import { Routes } from '@constants/routes';
+import ROUTES, { Routes } from '@constants/routes';
 
 import styled, { css } from 'styled-components';
 
 import Menu from './Menu';
 
-const Container = styled.div<{ page: Routes }>(
-	({ page, theme: { colors, media, space } }) => css`
+const Wrapper = styled.div<{ page: Routes }>(
+	({ page, theme: { colors, media, space, sizes } }) => css`
 		position: fixed;
-		inset: calc(2 * ${space.md});
+		left: calc(2 * ${space.md});
+		right: calc(2 * ${space.md});
 
-		bottom: unset !important;
+		padding: ${space.lg} ${space.md} ${space.sm} ${space.md};
+
+		background: ${colors[ROUTES[page] ?? 'home']};
 
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		background: ${colors[page]};
-
-		&:after {
-			content: '';
-			position: absolute;
-			inset: -1000%;
-			bottom: -${space.lg};
-			background: ${colors[page]};
-		}
+		justify-content: center;
 
 		${media.bp1} {
-			inset: calc(4 * ${space.lg});
+			padding: ${space.lg} ${space.lg} inherit ${space.md};
+		}
+
+		.header-container {
+			width: min(${sizes['w-max']}, 100%);
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
 		}
 	`
 );
 
-const Header = ({ page }: { page: Routes }) => (
-	<Container page={page}>
-		<Menu />
-		<Button
-			onClick={() => {
-				alert('Hi');
-			}}
-			bg={page}
-		>
-			My Resume
-		</Button>
-	</Container>
-);
-
-export default Header;
+export default function Header({ page }: { page: Routes }) {
+	return (
+		<Wrapper page={page}>
+			<div className="header-container">
+				<Menu />
+				<Button
+					onClick={() => {
+						alert('Hi');
+					}}
+					bg={page}
+				>
+					My Resume
+				</Button>
+			</div>
+		</Wrapper>
+	);
+}

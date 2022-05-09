@@ -100,7 +100,13 @@ export const theme = {
 		'z-50': '50',
 		'z-auto': 'auto'
 	},
-	transitions: {},
+	transitions: {
+		xSlow: '600ms',
+		slow: '500ms',
+		normal: '400ms',
+		fast: '200ms',
+		xFast: '100ms'
+	},
 	media: {
 		bp1: '@media only screen and (min-width: 768px)'
 	},
@@ -114,8 +120,8 @@ export const theme = {
 
 export type Theme = typeof theme;
 
-export type Colors = Theme['colors'];
-export type Space = Theme['space'];
-export type Sizes = Theme['sizes'];
+export type Colors = keyof Theme['colors'];
+export type Space = keyof Theme['space'];
+export type Sizes = keyof Theme['sizes'];
 
 export default theme;

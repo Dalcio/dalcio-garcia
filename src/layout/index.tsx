@@ -1,21 +1,9 @@
-import ROUTES, { Routes, RoutesKey } from '@constants/routes';
-
-import { useRouter } from 'next/router';
+import useRoute from '@hooks/useRoute';
 
 import LayoutContainer from './Container';
 import LayoutWrapper from './Wrapper';
 import Header from './Header';
 import HireMe from './HireMe';
-
-const getRouteName = (p: string): Routes =>
-	(ROUTES[p as RoutesKey] ?? ROUTES.home) as Routes;
-
-const useRoute = () => {
-	const { pathname } = useRouter();
-	const route = getRouteName(pathname.toLowerCase().substr(1));
-
-	return route as Routes;
-};
 
 const layoutHelpers = (
 	<>
@@ -33,7 +21,7 @@ export default function Layout({ children }) {
 		<LayoutWrapper page={currentRoute}>
 			<LayoutContainer page={currentRoute}>
 				{layoutHelpers}
-				{/* <Header page={currentRoute} /> */}
+				<Header page={currentRoute} />
 				{children}
 				<HireMe />
 			</LayoutContainer>
