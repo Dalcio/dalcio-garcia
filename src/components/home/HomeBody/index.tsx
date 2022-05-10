@@ -5,6 +5,7 @@ import awesomeData from '@data/awesome-things';
 import { HomeBodyContainer } from './styles';
 
 import AwesomeThing from './AwesomeThing';
+import Link from 'next/link';
 
 export default function HomeBody() {
 	return (
@@ -18,7 +19,9 @@ export default function HomeBody() {
 					scrambled it to make a type specimen book. It has survived not only
 					five centuries
 				</div>
-				<Button>See my approach</Button>
+				<Link href="/works">
+					<Button>See my approach</Button>
+				</Link>
 			</div>
 			<div className="awesome-things">
 				<Title type="small">Awesome Things</Title>

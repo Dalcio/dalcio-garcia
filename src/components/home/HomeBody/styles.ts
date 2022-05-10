@@ -19,6 +19,12 @@ export const HomeBodyContainer = styled.main(
 		& > .awesome-things {
 			margin-top: calc(4 * ${space.lg});
 
+			.awesome-intro {
+				max-width: 400px;
+				margin-top: ${space.lg};
+				margin-bottom: calc(2 * ${space.lg});
+			}
+
 			.the-things {
 				display: grid;
 				row-gap: calc(2 * ${space.lg});
