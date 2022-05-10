@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const HomeBodyContainer = styled.main(
 	({ theme: { space } }) => css`
-		padding: ${space.md} calc(3 * ${space.md});
+		padding: ${space.md} calc(3 * ${space.md}) calc(3 * ${space.md})
+			calc(3 * ${space.md});
 
 		min-height: 100vh;
 
