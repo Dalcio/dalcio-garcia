@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 
 const LayoutWrapper = styled.div<{ page: Routes }>(
 	({ page, theme: { space, colors, zIndices } }) => css`
-		background: ${colors.white};
 		padding: calc(2 * ${space.md});
 		display: flex;
 		justify-content: center;
@@ -24,6 +23,7 @@ const LayoutWrapper = styled.div<{ page: Routes }>(
 		}
 		&:after {
 			bottom: 0;
+			z-index: 20;
 		}
 	`
 );

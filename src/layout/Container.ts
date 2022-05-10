@@ -62,7 +62,7 @@ const diagonalAxys = (
 	& > .diagonal-axys:after {
 		content: '';
 		position: fixed;
-		z-index: ${zIndices['z-40']};
+		z-index: 200;
 	}
 
 	& > .top-diagonal:after {
@@ -77,6 +77,7 @@ const diagonalAxys = (
 		bottom: ${space.md};
 		left: calc(3 * ${space.md});
 		height: ${space.md};
+		background: ${colors.white};
 	}
 
 	& > .bottom-diagonal:after {

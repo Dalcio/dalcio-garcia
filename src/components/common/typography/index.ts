@@ -25,9 +25,33 @@ export const Subtitle = styled.p<{ type?: 'subtitle-1' | 'subtitle-2' }>(
 	`
 );
 
-export const Title = styled.p<{ type?: 'big' | 'meddium' }>(
-	({ type, theme: { fontSizes, fontWeights } }) => css`
+type TitleProps = {
+	type?: 'big' | 'meddium' | 'small';
+	underline?: boolean;
+};
+
+export const Title = styled.p<TitleProps>(
+	({
+		type,
+		underline,
+		theme: { space, colors, fontSizes, fontWeights }
+	}) => css`
 		font-size: ${fontSizes['3xl']};
+
+		${underline &&
+		css`
+			margin-bottom: calc(2 * ${space.md});
+
+			&:after {
+				display: block;
+				content: '';
+				position: absolute;
+				height: 3px;
+				width: 10%;
+				margin-top: ${space.md};
+				background: ${colors.text};
+			}
+		`}
 
 		${(() => {
 			switch (type) {
@@ -38,6 +62,11 @@ export const Title = styled.p<{ type?: 'big' | 'meddium' }>(
 				case 'meddium':
 					return css`
 						font-weight: 600;
+					`;
+				case 'small':
+					return css`
+						font-weight: 600;
+						font-size: ${fontSizes['2xl']};
 					`;
 				default:
 					return css`
