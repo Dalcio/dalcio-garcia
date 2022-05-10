@@ -1,6 +1,8 @@
+import { HomeBodyContainer } from './styles';
+
 export default function HomeBody() {
 	return (
-		<div>
+		<HomeBodyContainer>
 			<h1>Home Body</h1>
 			<h1>Home Body</h1>
 			<h1>Home Body</h1>
@@ -92,6 +94,6 @@ export default function HomeBody() {
 			<h1>Home Body</h1>
 			<h1>Home Body</h1>
 			<h1>Home Body</h1>
-		</div>
+		</HomeBodyContainer>
 	);
 }
