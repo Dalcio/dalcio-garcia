@@ -62,6 +62,7 @@ export const theme = {
 		'w-2': '0.75rem',
 		'w-3': '1rem',
 		'w-4': '2rem',
+		'w-400': '25rem',
 		'w-max': '1000px',
 		'h-0': '0.25rem',
 		'h-1': '0.5rem',

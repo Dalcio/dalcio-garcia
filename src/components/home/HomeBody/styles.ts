@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const HomeBodyContainer = styled.main(
-	({ theme: { space } }) => css`
-		padding: ${space.md} calc(3 * ${space.md}) calc(3 * ${space.md})
+	({ theme: { space, sizes } }) => css`
+		padding: ${space.md} calc(3 * ${space.md}) calc(15 * ${space.md})
 			calc(3 * ${space.md});
 
 		min-height: 100vh;
 
 		& > .intro {
-			max-width: 400px;
+			max-width: ${sizes['w-400']};
 			display: grid;
 
 			.intro-content {

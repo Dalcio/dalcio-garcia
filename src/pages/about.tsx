@@ -1,12 +1,13 @@
+import About from '@components/about';
 import Head from 'next/head';
 
-export default function About() {
+export default function AboutPage() {
 	return (
 		<>
 			<Head>
 				<title>Knowing Dálcio Garcia</title>
 			</Head>
-			<h1>About Page Space</h1>
+			<About />
 		</>
 	);
 }
