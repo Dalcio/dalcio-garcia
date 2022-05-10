@@ -30,6 +30,8 @@ const Wrapper = styled.div<{ page: Routes }>(
 
 		${media.bp1} {
 			padding: ${space.lg} ${space.lg} inherit ${space.md};
+			left: calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2);
+			right: calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2);
 		}
 	`
 );

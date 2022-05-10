@@ -1,11 +1,11 @@
 import { Button, Title } from '@components/common';
 
 import awesomeData from '@data/awesome-things';
+import Link from 'next/link';
 
 import { HomeBodyContainer } from './styles';
 
 import AwesomeThing from './AwesomeThing';
-import Link from 'next/link';
 
 export default function HomeBody() {
 	return (
