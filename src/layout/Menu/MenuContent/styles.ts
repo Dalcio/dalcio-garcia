@@ -15,12 +15,14 @@ export const MenuContentContainer = styled.main`
 		background: ${colors.menu};
 		padding: ${space.md};
 		padding-top: calc(3 * ${space.md});
+
+		z-index: 100;
 	`}
 `;
 
 export const Header = styled.header`
 	${({ theme }) => css`
-		margin-top: calc(2 * ${theme.space.md});
+		margin-top: calc(3 * ${theme.space.md});
 
 		a {
 			margin-left: ${theme.space.md};

@@ -1,12 +1,10 @@
-import { RoutesKey } from '@constants/routes';
-
 import { useState } from 'react';
+
 import MenuContent from './MenuContent';
 import MenuItem from './MenuItem';
-
 import MenuTrigger from './MenuTrigger';
 
-export default function Menu({ currentRoute }: { currentRoute: RoutesKey }) {
+export default function Menu() {
 	const [open, setIsOpen] = useState<boolean>(false);
 
 	const handleIsOpen = () => {
@@ -22,6 +20,7 @@ export default function Menu({ currentRoute }: { currentRoute: RoutesKey }) {
 					<MenuItem name="about" onSelect={handleIsOpen} />
 					<MenuItem name="works" onSelect={handleIsOpen} />
 					<MenuItem name="articles" onSelect={handleIsOpen} />
+					<div className="close-pane" onClick={handleIsOpen} />
 				</MenuContent>
 			)}
 		</div>

@@ -7,14 +7,17 @@ import createSpanAnDelay from './createSpanAnDelay';
 
 const btnCloseCss = (theme: Theme) => css`
 	& > .btn-close {
+		position: relative;
+		z-index: 110;
+
 		display: inline-block;
 		overflow: hidden;
-		font: bold small-caps normal 12px Arial, Helvetica, sans-serif;
+		font: bold small-caps normal 13px Arial, Helvetica, sans-serif;
 		letter-spacing: 3px;
-		transition: font-size ${theme.transitions.xFast} ease-in;
+		transition: all ${theme.transitions.xFast} ease-in;
 
 		&:hover {
-			font-size: 13px;
+			font-size: 14px;
 		}
 
 		& > span {
@@ -64,12 +67,19 @@ const btnOpenCss = (theme: Theme) => css`
 const MenuTriggerContainer = styled.button`
 	cursor: pointer;
 	position: relative;
-	z-index: 1;
 	background: none;
 	border: none;
 
 	${({ theme }) => css`
 		left: calc(2 * ${theme.space.md});
+
+		.close-pane {
+			position: fixed;
+			/* z-index: 1 !important; */
+			background: ${theme.colors.primary};
+			inset: calc(2 * ${theme.space.md});
+			opacity: 0.4;
+		}
 
 		${btnCloseCss(theme)}
 		${btnOpenCss(theme)}

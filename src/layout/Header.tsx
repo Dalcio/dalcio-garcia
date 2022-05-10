@@ -1,4 +1,4 @@
-import { Button } from '@components/common';
+import { Subtitle } from '@components/common';
 import ROUTES, { Routes } from '@constants/routes';
 
 import styled, { css } from 'styled-components';
@@ -6,8 +6,9 @@ import styled, { css } from 'styled-components';
 import Menu from './Menu';
 
 const Wrapper = styled.div<{ page: Routes }>(
-	({ page, theme: { colors, media, space, sizes } }) => css`
+	({ page, theme: { colors, media, space, sizes, zIndices } }) => css`
 		position: fixed;
+		z-index: ${zIndices['z-20']};
 		left: calc(2 * ${space.md});
 		right: calc(2 * ${space.md});
 
@@ -15,18 +16,20 @@ const Wrapper = styled.div<{ page: Routes }>(
 
 		background: ${colors[ROUTES[page] ?? 'home']};
 
-		display: flex;
-		justify-content: center;
-
-		${media.bp1} {
-			padding: ${space.lg} ${space.lg} inherit ${space.md};
-		}
-
 		.header-container {
 			width: min(${sizes['w-max']}, 100%);
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+		}
+
+		.current-page-name {
+			margin-right: calc(2 * ${space.md});
+			padding-top: calc(2 * ${space.md});
+		}
+
+		${media.bp1} {
+			padding: ${space.lg} ${space.lg} inherit ${space.md};
 		}
 	`
 );
@@ -36,14 +39,9 @@ export default function Header({ page }: { page: Routes }) {
 		<Wrapper page={page}>
 			<div className="header-container">
 				<Menu />
-				<Button
-					onClick={() => {
-						alert('Hi');
-					}}
-					bg={page}
-				>
-					My Resume
-				</Button>
+				<Subtitle className="current-page-name">
+					"{((page === '/' || page === 'home') && 'Dálcio Garcia') || page}"
+				</Subtitle>
 			</div>
 		</Wrapper>
 	);

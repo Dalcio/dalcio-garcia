@@ -1,11 +1,14 @@
 import MenuTriggerContainer from './container';
 
 const close = (
-	<span className="btn-close">
-		{'CLOSE'.split('').map((letter) => (
-			<span key={letter}>{letter}</span>
-		))}
-	</span>
+	<>
+		<span className="btn-close">
+			{'CLOSE'.split('').map((letter) => (
+				<span key={letter}>{letter}</span>
+			))}
+		</span>
+		<div className="close-pane" />
+	</>
 );
 
 const hamburgerBtn = (
