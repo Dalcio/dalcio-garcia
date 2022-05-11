@@ -1,12 +1,13 @@
+import Articles from '@components/articles';
 import Head from 'next/head';
 
-export default function Community() {
+export default function ArticlesPage() {
 	return (
 		<>
 			<Head>
 				<title>Dálcio Garcia</title>
 			</Head>
-			<h1>Hello from Community</h1>
+			<Articles />
 		</>
 	);
 }
