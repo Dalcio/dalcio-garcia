@@ -111,6 +111,13 @@ const LayoutContainer = styled.div<{ page: Routes }>`
 		width: 100%;
 		max-width: ${theme.sizes['w-max']};
 
+		& > header,
+		& > main {
+			padding: calc(8 * ${theme.space.md}) calc(3 * ${theme.space.md});
+			background: ${theme.colors[ROUTES[page] ?? 'home']};
+			min-height: 100vh;
+		}
+
 		${borderAxys(theme)};
 		${diagonalAxys(theme, page)};
 	`}

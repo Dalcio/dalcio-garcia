@@ -2,13 +2,11 @@ import styled, { css } from 'styled-components';
 
 export const HomeHeaderContainer = styled.header(
 	({ theme: { space, radii, colors, media } }) => css`
-		padding: calc(8 * ${space.md}) calc(3 * ${space.md});
 		display: grid;
 		row-gap: ${space.lg};
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		min-height: 100vh;
 
 		.avatar {
 			position: relative;

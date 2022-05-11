@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components';
 
 export const Text = styled.p(
-	({ theme: { fontSizes } }) => css`
+	({ theme: { fontSizes, space } }) => css`
 		font-size: ${fontSizes.base};
+		margin: ${space.md} 0;
+		word-break: break-all;
 	`
 );
 

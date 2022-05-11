@@ -18,15 +18,13 @@ export default function Layout({ children }) {
 	const currentRoute = useRoute();
 
 	return (
-		<>
-			<HireMe />
-			<LayoutWrapper page={currentRoute}>
-				<LayoutContainer page={currentRoute}>
-					{layoutHelpers}
-					<Header page={currentRoute} />
-					{children}
-				</LayoutContainer>
-			</LayoutWrapper>
-		</>
+		<LayoutWrapper page={currentRoute}>
+			<LayoutContainer page={currentRoute}>
+				{layoutHelpers}
+				<Header page={currentRoute} />
+				{children}
+				<HireMe />
+			</LayoutContainer>
+		</LayoutWrapper>
 	);
 }
