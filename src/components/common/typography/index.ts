@@ -8,7 +8,9 @@ export const Text = styled.p(
 	`
 );
 
-export const Subtitle = styled.p<{ type?: 'subtitle-1' | 'subtitle-2' }>(
+export const Subtitle = styled.p<{
+	type?: 'subtitle-1' | 'subtitle-2' | 'subtitle-3';
+}>(
 	({ type, theme: { fontSizes, fontWeights } }) => css`
 		font-size: ${fontSizes.lg};
 
@@ -16,6 +18,11 @@ export const Subtitle = styled.p<{ type?: 'subtitle-1' | 'subtitle-2' }>(
 			switch (type) {
 				case 'subtitle-2':
 					return css`
+						font-weight: ${fontWeights.bold};
+					`;
+				case 'subtitle-3':
+					return css`
+						font-size: ${fontSizes.base};
 						font-weight: ${fontWeights.bold};
 					`;
 				default:

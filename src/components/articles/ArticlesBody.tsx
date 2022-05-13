@@ -2,15 +2,12 @@ import styled, { css } from 'styled-components';
 
 import { Title, Text, Subtitle } from '@components/common';
 
-const ArticlesBodyContainer = styled.main(
-	({ theme: { space, sizes } }) => css``
-);
-
 type ArticleProps = {
 	name: string;
 	date: string;
 	desc: string;
 	link: string;
+	home?: boolean;
 };
 
 const ArticleContainer = styled.a(
@@ -45,11 +42,24 @@ const ArticleContainer = styled.a(
 	`
 );
 
-const Article = ({ date, name, desc, link }: ArticleProps) => (
+export const Article = ({ home, date, name, desc, link }: ArticleProps) => (
 	<ArticleContainer href={link} target="blank">
-		<Subtitle className="date">{date}</Subtitle>
 		<div>
-			<Title className="name">{name}</Title>
+			{(!home && (
+				<>
+					<Subtitle className="date">{date}</Subtitle>
+					<Title className="name">{name}</Title>
+				</>
+			)) || (
+				<>
+					<Subtitle type="subtitle-3" className="date">
+						{date}
+					</Subtitle>
+					<Subtitle type="subtitle-2" className="name">
+						{name}
+					</Subtitle>
+				</>
+			)}
 			<Text className="desc">{desc}</Text>
 		</div>
 	</ArticleContainer>
@@ -57,7 +67,7 @@ const Article = ({ date, name, desc, link }: ArticleProps) => (
 
 export default function ArticlesBody() {
 	return (
-		<ArticlesBodyContainer>
+		<main>
 			<Article
 				date="May 11 2022"
 				name="Name of the Article"
@@ -70,6 +80,6 @@ export default function ArticlesBody() {
 				link="https://es.lipsum.com/"
 				desc="El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo Contenido aquí, contenido aqu"
 			/>
-		</ArticlesBodyContainer>
+		</main>
 	);
 }

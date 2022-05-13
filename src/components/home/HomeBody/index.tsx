@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { HomeBodyContainer } from './styles';
 
 import AwesomeThing from './AwesomeThing';
+import { Article } from '@components/articles/ArticlesBody';
 
 export default function HomeBody() {
 	return (
@@ -33,6 +34,13 @@ export default function HomeBody() {
 					{awesomeData.map((props) => (
 						<AwesomeThing {...props} key={props.name} />
 					))}
+					<Article
+						home
+						date="May 11 2022"
+						name="Name of the Article"
+						link="https://es.lipsum.com/"
+						desc="El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo Contenido aquí, contenido aqu"
+					/>
 				</div>
 			</div>
 		</HomeBodyContainer>
