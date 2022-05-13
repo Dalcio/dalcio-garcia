@@ -50,7 +50,9 @@ export const Article = ({ home, date, name, desc, link }: ArticleProps) => (
 					<Subtitle className="date">
 						<small>Article written on</small> {date}
 					</Subtitle>
-					<Title className="name">{name}</Title>
+					<Title type="small" className="name">
+						{name}
+					</Title>
 				</>
 			)) || (
 				<>

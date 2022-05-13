@@ -32,6 +32,7 @@ export const ProjectViewContainer = styled.div<{ cover: string }>(
 			.about {
 				display: grid;
 				row-gap: ${t.space.md};
+				grid-template-rows: auto 1fr auto;
 
 				footer {
 					font-weight: bold;
@@ -58,7 +59,7 @@ export const ProjectViewContainer = styled.div<{ cover: string }>(
 
 		${t.media.bp1} {
 			.cover {
-				height: 300px;
+				height: 250px;
 			}
 		}
 	`

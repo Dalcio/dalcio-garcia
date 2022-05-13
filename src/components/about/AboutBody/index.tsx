@@ -23,7 +23,9 @@ export default function AboutBody() {
 					(injected humour and the like).
 				</Text>
 			</div>
-			<Title className="section-head">Skills and Experiences</Title>
+			<Title type="small" className="section-head">
+				Skills and Experiences
+			</Title>
 			<div className="section-body">
 				<Text>
 					Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -33,7 +35,9 @@ export default function AboutBody() {
 				</Text>
 			</div>
 			<Skills />
-			<Title className="section-head">Hobbies</Title>
+			<Title type="small" className="section-head">
+				Hobbies
+			</Title>
 			<div className="section-body">
 				<Text>
 					Lorem Ipsum is simply dummy text of the printing and typesetting

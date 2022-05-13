@@ -6,17 +6,17 @@ export const theme = {
 		white: '#f4f9fc',
 		menu: '#e1efd8',
 
-		home: '#ddeaf6',
-		homeLight: '#ddeaf6',
+		home: '#e6f5fa',
+		'on-home': '#ddeaf6',
 
 		about: '#fff2cc',
-		aboutLight: '#fff2cc',
+		'on-about': '#fff2cc',
 
 		articles: '#d5dbe5',
-		articlesLight: '#d5dbe5',
+		'on-articles': '#d5dbe5',
 
 		works: '#d8e2f3',
-		worksLight: '#d8e2f3'
+		'on-works': '#d8e2f3'
 	},
 	space: {
 		sm: '5px',
@@ -44,7 +44,7 @@ export const theme = {
 	},
 	fontWeights: {
 		hairline: 100,
-		'extra-light': 100,
+		'on-extra': 100,
 		thin: 200,
 		light: 300,
 		normal: 400,

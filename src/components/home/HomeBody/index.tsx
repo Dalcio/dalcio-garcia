@@ -1,4 +1,4 @@
-import { Button, Title } from '@components/common';
+import { Button, Title, Text } from '@components/common';
 
 import awesomeData from '@data/awesome-things';
 import Link from 'next/link';
@@ -14,11 +14,13 @@ export default function HomeBody() {
 			<div className="intro">
 				<Title underline>Let´s build something awesome together.</Title>
 				<div className="intro-content">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book. It has survived not only
-					five centuries
+					<Text>
+						Lorem Ipsum is simply dummy text of the printing and typesetting
+						industry. Lorem Ipsum has been the industry's standard dummy text
+						ever since the 1500s, when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book. It has survived not
+						only five centuries
+					</Text>
 				</div>
 				<Button>
 					<Link href="/works">See my approach</Link>
@@ -27,8 +29,10 @@ export default function HomeBody() {
 			<div className="awesome-things">
 				<Title type="small">Awesome Things</Title>
 				<div className="awesome-intro">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry.
+					<Text>
+						Lorem Ipsum is simply dummy text of the printing and typesetting
+						industry.
+					</Text>
 				</div>
 				<div className="the-things">
 					{awesomeData.map((props) => (
