@@ -24,7 +24,7 @@ export const ProjectViewContainer = styled.div<{ cover: string }>(
 
 		.inner-container {
 			display: grid;
-			background: ${t.colors.white};
+			background: ${t.colors.works};
 			grid-template-rows: 1fr auto;
 			gap: ${t.space.md};
 			padding: calc(2 * ${t.space.md});

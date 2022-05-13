@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const HomeHeaderContainer = styled.header(
 	({ theme: { space, radii, colors, media } }) => css`
 		display: grid;
-		row-gap: ${space.lg};
+		row-gap: calc(2 * ${space.lg});
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -33,9 +33,9 @@ export const HomeHeaderContainer = styled.header(
 			grid-template-areas:
 				'avatar greetings empty'
 				'avatar self-intro empty';
-			grid-template-columns: 0.7fr 0.6fr 0.05fr;
+			grid-template-columns: 0.7fr 0.6fr;
 			justify-items: center;
-			gap: calc(2 * ${space.lg});
+			gap: calc(4 * ${space.lg});
 			text-align: right;
 
 			& > * {

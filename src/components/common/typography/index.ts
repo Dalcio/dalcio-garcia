@@ -46,6 +46,7 @@ export const Title = styled.p<TitleProps>(
 		theme: { space, colors, fontSizes, fontWeights }
 	}) => css`
 		font-size: ${fontSizes['3xl']};
+		line-height: 1.5;
 
 		${underline &&
 		css`

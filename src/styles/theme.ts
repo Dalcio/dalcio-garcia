@@ -3,12 +3,20 @@ export const theme = {
 		text: '#000',
 		primary: '#3f3f3f',
 		border: '#a5a7af',
-		white: '#fff',
+		white: '#f4f9fc',
 		menu: '#e1efd8',
+
 		home: '#ddeaf6',
+		homeLight: '#ddeaf6',
+
 		about: '#fff2cc',
+		aboutLight: '#fff2cc',
+
 		articles: '#d5dbe5',
-		works: '#d8e2f3'
+		articlesLight: '#d5dbe5',
+
+		works: '#d8e2f3',
+		worksLight: '#d8e2f3'
 	},
 	space: {
 		sm: '5px',
@@ -30,7 +38,8 @@ export const theme = {
 		'7xl': '5rem'
 	},
 	fonts: {
-		untitled: 'Roboto, sans-serif',
+		// untitled: 'Roboto, sans-serif',
+		untitled: 'Bitter, serif',
 		mono: 'Fira Code, monospace'
 	},
 	fontWeights: {

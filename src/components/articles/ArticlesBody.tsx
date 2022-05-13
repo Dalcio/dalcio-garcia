@@ -47,21 +47,23 @@ export const Article = ({ home, date, name, desc, link }: ArticleProps) => (
 		<div>
 			{(!home && (
 				<>
-					<Subtitle className="date">{date}</Subtitle>
+					<Subtitle className="date">
+						<small>Article written on</small> {date}
+					</Subtitle>
 					<Title className="name">{name}</Title>
 				</>
 			)) || (
 				<>
 					<Subtitle type="subtitle-3" className="date">
-						{date}
+						<small>Article written on</small> {date}
 					</Subtitle>
 					<Subtitle type="subtitle-2" className="name">
 						{name}
 					</Subtitle>
 				</>
 			)}
-			<Text className="desc">{desc}</Text>
 		</div>
+		<Text className="desc">{desc}</Text>
 	</ArticleContainer>
 );
 

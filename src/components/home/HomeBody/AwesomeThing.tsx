@@ -7,49 +7,49 @@ const Container = styled.div(
 		grid-template-rows: auto auto auto;
 		row-gap: ${space.lg};
 
-		.awesome-logo {
-			display: none;
-		}
-
 		${media.bp1} {
 			grid-template-columns: auto 1fr;
-			grid-template-rows: auto 1fr auto;
+			grid-template-rows: auto auto;
+			gap: ${space.lg};
+		}
+
+		.awesome-btn {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			gap: ${space.lg};
 
-			.awesome-logo {
-				grid-row: 1 / -1;
-				display: block;
-				width: 220px;
-				height: 150px;
-				object-fit: cover;
+			button {
+				width: 100%;
 			}
 		}
 	`
 );
 
 type AwesomeThingProps = {
-	url: string;
+	github?: string;
 	name: string;
-	imgSrc: string;
+	page?: string;
 	desc: string;
 };
 
 export default function AwesomeThing({
-	url,
+	github,
 	name,
-	imgSrc,
+	page,
 	desc
 }: AwesomeThingProps) {
 	return (
 		<Container>
-			<img src={imgSrc} alt={name} className="awesome-logo" />
 			<Subtitle type="subtitle-2" className="awesome-name">
 				{name}
 			</Subtitle>
 			<div className="awesome-desc">{desc}</div>
 			<div className="awesome-btn">
-				<a href={url} target="blank">
-					<Button>View {name}</Button>
+				<a href={github} target="blank">
+					<Button>Github</Button>
+				</a>
+				<a href={page} target="blank">
+					<Button>Visit Page</Button>
 				</a>
 			</div>
 		</Container>
