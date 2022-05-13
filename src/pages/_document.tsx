@@ -1,9 +1,8 @@
-import React from 'react';
 import Document, {
-	DocumentInitialProps,
 	DocumentContext,
-	Html,
+	DocumentInitialProps,
 	Head,
+	Html,
 	Main,
 	NextScript
 } from 'next/document';
@@ -26,12 +25,12 @@ export default class MyDocument extends Document {
 			const initialProps = await Document.getInitialProps(ctx);
 			return {
 				...initialProps,
-				styles: (
+				styles: [
 					<>
 						{initialProps.styles}
 						{sheet.getStyleElement()}
 					</>
-				)
+				]
 			};
 		} finally {
 			sheet.seal();

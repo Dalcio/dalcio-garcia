@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
-export const HomeBodyContainer = styled.main(
-	({ theme: { space, sizes } }) => css`
+export const HomeBodyContainer = styled.main`
+	${({ theme: { space, sizes } }) => css`
 		& > .intro {
 			max-width: ${sizes['w-500']};
 			display: grid;
@@ -26,5 +26,5 @@ export const HomeBodyContainer = styled.main(
 				row-gap: calc(2 * ${space.lg});
 			}
 		}
-	`
-);
+	`}
+`;

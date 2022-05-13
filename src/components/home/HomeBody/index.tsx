@@ -20,9 +20,9 @@ export default function HomeBody() {
 					scrambled it to make a type specimen book. It has survived not only
 					five centuries
 				</div>
-				<Link href="/works">
-					<Button>See my approach</Button>
-				</Link>
+				<Button>
+					<Link href="/works">See my approach</Link>
+				</Button>
 			</div>
 			<div className="awesome-things">
 				<Title type="small">Awesome Things</Title>

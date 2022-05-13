@@ -13,6 +13,11 @@ const ButtonContainer = styled.button<ButtonProps>`
 		outline: none;
 		border: none;
 
+		& * {
+			text-decoration: none !important;
+			color: ${colors.text} !important;
+		}
+
 		position: relative;
 
 		&:after {
