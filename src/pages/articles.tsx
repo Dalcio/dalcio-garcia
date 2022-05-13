@@ -5,7 +5,7 @@ export default function ArticlesPage() {
 	return (
 		<>
 			<Head>
-				<title>Dálcio Garcia</title>
+				<title>My Articles</title>
 			</Head>
 			<Articles />
 		</>

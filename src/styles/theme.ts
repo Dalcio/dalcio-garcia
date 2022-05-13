@@ -2,7 +2,7 @@ export const theme = {
 	colors: {
 		text: '#000',
 		primary: '#3f3f3f',
-		border: '#000',
+		border: '#a5a7af',
 		white: '#fff',
 		menu: '#e1efd8',
 		home: '#ddeaf6',
@@ -73,8 +73,8 @@ export const theme = {
 		'h-max': '1440px'
 	},
 	borders: {
-		'hand-drawn-1': `1px solid #000`,
-		'hand-drawn-2': `2px solid #000`
+		'hand-drawn-1': `1px solid #a5a7af`,
+		'hand-drawn-2': `2px solid #a5a7af`
 	},
 	borderWidths: {
 		'border-0': '0px',

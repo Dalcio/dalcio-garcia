@@ -1,12 +1,13 @@
+import Works from '@components/works';
 import Head from 'next/head';
 
-export default function Works() {
+export default function WorksPage() {
 	return (
 		<>
 			<Head>
-				<title>Dálcio Garcia</title>
+				<title>My Works</title>
 			</Head>
-			<h1>My Works</h1>
+			<Works />
 		</>
 	);
 }
