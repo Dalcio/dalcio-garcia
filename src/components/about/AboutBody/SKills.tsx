@@ -8,6 +8,7 @@ const SkillsContainer = styled.div(
 			border: 1px solid ${t.colors.border};
 			padding: ${t.space.md};
 			text-align: center;
+			max-width: ${t.sizes['w-500']};
 
 			.head {
 				margin: ${t.space.md};

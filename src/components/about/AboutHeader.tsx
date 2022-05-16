@@ -20,7 +20,7 @@ export default function AboutHeader() {
 				Dálcio is a creative front-end mobile and web developer. I’m a creative
 				front-end mobile and web developer.
 			</Text>
-			<Button>See My Resume</Button>
+			<Button bg="about">See My Resume</Button>
 		</AboutHeaderContainer>
 	);
 }

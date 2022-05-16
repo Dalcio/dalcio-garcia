@@ -8,6 +8,7 @@ type ArticleProps = {
 	desc: string;
 	link: string;
 	home?: boolean;
+	className?: string;
 };
 
 const ArticleContainer = styled.a(
@@ -18,6 +19,7 @@ const ArticleContainer = styled.a(
 
 		.date {
 			margin-bottom: ${t.space.md};
+			color: ${t.colors.primary};
 		}
 
 		:hover {
@@ -42,8 +44,15 @@ const ArticleContainer = styled.a(
 	`
 );
 
-export const Article = ({ home, date, name, desc, link }: ArticleProps) => (
-	<ArticleContainer href={link} target="blank">
+export const Article = ({
+	home,
+	date,
+	name,
+	desc,
+	link,
+	className
+}: ArticleProps) => (
+	<ArticleContainer className={className} href={link} target="blank">
 		<div>
 			{(!home && (
 				<>

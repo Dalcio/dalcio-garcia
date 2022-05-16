@@ -25,7 +25,11 @@ export const HomeHeaderContainer = styled.header(
 			#avatar {
 				position: relative;
 				z-index: 1;
-				height: 15rem;
+				height: 10rem;
+
+				@media screen and (min-width: 240px) {
+					height: 15rem;
+				}
 			}
 		}
 

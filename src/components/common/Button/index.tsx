@@ -3,11 +3,13 @@ import styled, { css } from 'styled-components';
 
 export type ButtonProps = {
 	bg?: Routes;
-	size?: 'small' | 'medium' | 'arge';
 };
 
 const ButtonContainer = styled.button<ButtonProps>`
-	${({ size, bg, theme: { colors, space, borders, letterSpacings } }) => css`
+	${({
+		bg,
+		theme: { colors, space, borders, transitions, letterSpacings }
+	}) => css`
 		background: none;
 		cursor: pointer;
 		outline: none;
@@ -30,7 +32,7 @@ const ButtonContainer = styled.button<ButtonProps>`
 			right: -${space.sm};
 			border: ${borders['hand-drawn-1']};
 			background: ${colors[ROUTES[bg] ?? 'home']};
-			transition: all 0.5s ease;
+			transition: all ${transitions.fast} ease;
 		}
 
 		&:hover,
@@ -50,8 +52,9 @@ const ButtonContainer = styled.button<ButtonProps>`
 			text-align: center;
 			position: relative;
 			z-index: 2;
-			background: ${colors[ROUTES[bg] ?? 'home']};
+			background: ${colors[`on-${ROUTES[bg] ?? 'home'}`]};
 			border: ${borders['hand-drawn-1']};
+			color: ${borders['hand-drawn-1']};
 		}
 	`}
 `;

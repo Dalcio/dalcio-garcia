@@ -1,4 +1,5 @@
 import { Button, Title, Text } from '@components/common';
+import { Article } from '@components/articles/ArticlesBody';
 
 import awesomeData from '@data/awesome-things';
 import Link from 'next/link';
@@ -6,7 +7,6 @@ import Link from 'next/link';
 import { HomeBodyContainer } from './styles';
 
 import AwesomeThing from './AwesomeThing';
-import { Article } from '@components/articles/ArticlesBody';
 
 export default function HomeBody() {
 	return (
@@ -40,6 +40,7 @@ export default function HomeBody() {
 					))}
 					<Article
 						home
+						className="article-from-home"
 						date="May 11 2022"
 						name="Name of the Article"
 						link="https://es.lipsum.com/"

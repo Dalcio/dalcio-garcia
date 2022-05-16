@@ -85,12 +85,12 @@ export default function ProjectView({
 				<div className="btns">
 					{github && (
 						<a href={github} target="blank">
-							<Button>Github</Button>
+							<Button bg="works">Github</Button>
 						</a>
 					)}
 					{page && (
 						<a href={page} target="blank">
-							<Button>Visit</Button>
+							<Button bg="works">Visit</Button>
 						</a>
 					)}
 				</div>

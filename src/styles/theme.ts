@@ -6,16 +6,16 @@ export const theme = {
 		white: '#f4f9fc',
 		menu: '#e1efd8',
 
-		home: '#e6f5fa',
+		home: '#E1EEF6',
 		'on-home': '#ddeaf6',
 
-		about: '#fff2cc',
+		about: '#FEF3D3',
 		'on-about': '#fff2cc',
 
-		articles: '#d5dbe5',
+		articles: '#DCE3EA',
 		'on-articles': '#d5dbe5',
 
-		works: '#d8e2f3',
+		works: '#DBE4F4',
 		'on-works': '#d8e2f3'
 	},
 	space: {

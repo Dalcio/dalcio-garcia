@@ -4,6 +4,12 @@ import { AboutBodyContainer } from './styles';
 
 import Skills from './SKills';
 
+const SectionBody = ({ content }: { content: string }) => (
+	<div className="section-body">
+		<Text>{content}</Text>
+	</div>
+);
+
 export default function AboutBody() {
 	return (
 		<AboutBodyContainer>
@@ -26,24 +32,12 @@ export default function AboutBody() {
 			<Title type="small" className="section-head">
 				Skills and Experiences
 			</Title>
-			<div className="section-body">
-				<Text>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book.
-				</Text>
-			</div>
+			<SectionBody content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
 			<Skills />
 			<Title type="small" className="section-head">
 				Hobbies
 			</Title>
-			<div className="section-body">
-				<Text>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry.
-				</Text>
-			</div>
+			<SectionBody content="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
 		</AboutBodyContainer>
 	);
 }

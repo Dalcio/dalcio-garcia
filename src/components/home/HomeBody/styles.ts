@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const HomeBodyContainer = styled.main`
-	${({ theme: { space, sizes } }) => css`
+	${({ theme: { space, sizes, media } }) => css`
 		& > .intro {
 			max-width: ${sizes['w-500']};
 			display: grid;
@@ -24,6 +24,13 @@ export const HomeBodyContainer = styled.main`
 			.the-things {
 				display: grid;
 				row-gap: calc(2 * ${space.lg});
+
+				& > .article-from-home {
+					${media.bp1} {
+						grid-template-columns: auto 1fr;
+						column-gap: ${space.lg};
+					}
+				}
 			}
 		}
 	`}

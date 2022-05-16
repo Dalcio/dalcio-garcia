@@ -17,21 +17,29 @@ const Wrapper = styled.div<{ page: Routes }>(
 		background: ${colors[ROUTES[page] ?? 'home']};
 
 		.header-container {
-			width: min(${sizes['w-max']}, 100%);
 			display: flex;
 			justify-content: space-between;
-			align-items: flex-end;
+			align-items: center;
 		}
 
 		.current-page-name {
 			margin-right: calc(2 * ${space.md});
 			padding-top: calc(2 * ${space.md});
+			display: none;
+
+			@media only screen and (min-width: 253px) {
+				display: inline;
+			}
 		}
 
 		${media.bp1} {
 			padding: ${space.lg} ${space.lg} inherit ${space.md};
-			left: calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2);
-			right: calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2);
+			left: calc(
+				calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2) + 2 * ${space.md}
+			);
+			right: calc(
+				calc(calc(100vw - min(${sizes['w-max']}, 100%)) / 2) + 2 * ${space.md}
+			);
 		}
 	`
 );
