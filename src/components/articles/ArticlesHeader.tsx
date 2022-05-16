@@ -17,8 +17,9 @@ export default function ArticlesHeader() {
 				My articles
 			</Title>
 			<Text>
-				I Start writing some articles because, If you want learm better teach to
-				someone the subject that your studying.
+				The best way to learn something is to try to teach something, no matter
+				how small or big it may seem. That's why I decided to start writing and
+				sharing some content that I find interesting with the community.
 			</Text>
 		</ArticlesHeaderContainer>
 	);

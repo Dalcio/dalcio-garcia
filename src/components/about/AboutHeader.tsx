@@ -17,10 +17,14 @@ export default function AboutHeader() {
 				Who's Dálcio Garcia?
 			</Title>
 			<Text>
-				Dálcio is a creative front-end mobile and web developer. I’m a creative
-				front-end mobile and web developer.
+				Dálcio is a creative front-end <strong>mobile</strong> and{' '}
+				<strong>web</strong> developer.
 			</Text>
-			<Button bg="about">See My Resume</Button>
+			<Button bg="about">
+				<a href="/dalcio.pdf" download="dalcio">
+					See My Resume
+				</a>
+			</Button>
 		</AboutHeaderContainer>
 	);
 }

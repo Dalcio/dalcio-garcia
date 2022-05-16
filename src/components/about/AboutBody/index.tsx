@@ -15,29 +15,31 @@ export default function AboutBody() {
 		<AboutBodyContainer>
 			<div className="my-jouney">
 				<Text>
-					It is a long established fact that a reader will be distracted by the
-					readable content of a page when looking at its layout. The point of
-					using Lorem Ipsum is that it has a more-or-less normal distribution of
-					letters, as opposed to using 'Content here, content here', making it
-					look like readable English.
+					I'm a Computer Engineering student at{' '}
+					<abbr title="Instituto Superior Politécnico de Tecnologias e Ciências">
+						ISPTEC
+					</abbr>
+					, Luanda Angola.
 				</Text>
 				<Text>
-					Many desktop publishing packages and web page editors now use Lorem
-					Ipsum as their default model text, and a search for 'lorem ipsum' will
-					uncover many web sites still in their infancy. Various versions have
-					evolved over the years, sometimes by accident, sometimes on purpose
-					(injected humour and the like).
+					Over time, the curious gene in mi could not stand still when the
+					subject involved software development, always wanting to discover the
+					role behind the scenes. With that, I developed a huge passion for the
+					software building process, because the process of bringing something
+					something to life, from paper to digital proved to be very
+					captivating.
 				</Text>
+				<Text>Currently, I act as an application front-end.</Text>
 			</div>
 			<Title type="small" className="section-head">
 				Skills and Experiences
 			</Title>
-			<SectionBody content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+			<SectionBody content="Currently, for construction of my projects I have my knowledge stack based on javascript frameworks, leaving open the engagement of others for when necessary." />
 			<Skills />
 			<Title type="small" className="section-head">
 				Hobbies
 			</Title>
-			<SectionBody content="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+			<SectionBody content="Trying to smile everyday. I like to do some exercise most days, for health especially to free my mind and improve my creativity, I also love to eat and cook and I like to meditate to improve my self-control. And best of all, watch (films, series, documentaries, anime and so on)" />
 		</AboutBodyContainer>
 	);
 }

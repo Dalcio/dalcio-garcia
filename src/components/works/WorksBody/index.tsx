@@ -1,4 +1,4 @@
-import { Title, Text } from '@components/common';
+import { Title } from '@components/common';
 import styled, { css } from 'styled-components';
 import ProjectView from './ProjectView';
 
@@ -11,6 +11,10 @@ const WorksBodyContainer = styled.main(
 
 		.intro {
 			max-width: ${sizes['w-500']};
+		}
+
+		.section-head {
+			margin-bottom: ${space.lg};
 		}
 
 		.projects {
@@ -27,9 +31,9 @@ const WorksBodyContainer = styled.main(
 export default function WorksBody() {
 	return (
 		<WorksBodyContainer>
-			<div className="intro">
-				<Text>The Works Give a look at what I built</Text>
-			</div>
+			<Title type="small" className="section-head">
+				Some Things that I've Built
+			</Title>
 			<div className="projects">
 				<ProjectView
 					name="Project Name"

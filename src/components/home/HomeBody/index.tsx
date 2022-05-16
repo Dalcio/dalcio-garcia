@@ -15,11 +15,10 @@ export default function HomeBody() {
 				<Title underline>Let´s build something awesome together.</Title>
 				<div className="intro-content">
 					<Text>
-						Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry. Lorem Ipsum has been the industry's standard dummy text
-						ever since the 1500s, when an unknown printer took a galley of type
-						and scrambled it to make a type specimen book. It has survived not
-						only five centuries
+						From mobile app to web app, desktop app or{' '}
+						<abbr title="Progress Web Apps">PWA</abbr>, I've been creating
+						awesome systems with awesome people, arround the web bring to
+						lifecreative things.
 					</Text>
 				</div>
 				<Button>
@@ -27,11 +26,12 @@ export default function HomeBody() {
 				</Button>
 			</div>
 			<div className="awesome-things">
-				<Title type="small">Awesome Things</Title>
+				<Title type="small">Open Things</Title>
 				<div className="awesome-intro">
 					<Text>
-						Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry.
+						When I have some time, I like to create open source stuff to
+						practice, study and share knowledge with the dev community, as this
+						process makes me learn more about something.
 					</Text>
 				</div>
 				<div className="the-things">
