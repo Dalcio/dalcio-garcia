@@ -13,7 +13,7 @@ export const theme = {
 		'on-about': '#fff2cc',
 
 		articles: '#DCE3EA',
-		'on-articles': '#d5dbe5',
+		'on-articles': '#fdba30',
 
 		works: '#DBE4F4',
 		'on-works': '#d8e2f3'
@@ -72,7 +72,7 @@ export const theme = {
 		'w-3': '1rem',
 		'w-4': '2rem',
 		'w-400': '25rem',
-		'w-500': '31.25rem',
+		'w-700': '43.75rem',
 		'w-max': '1000px',
 		'h-0': '0.25rem',
 		'h-1': '0.5rem',
@@ -120,12 +120,6 @@ export const theme = {
 	},
 	media: {
 		bp1: '@media only screen and (min-width: 768px)'
-	},
-	utils: {
-		marginX: (value: string) => ({ marginLeft: value, marginRight: value }),
-		marginY: (value: string) => ({ marginTop: value, marginBottom: value }),
-		paddingX: (value: string) => ({ paddingLeft: value, paddingRight: value }),
-		paddingY: (value: string) => ({ paddingTop: value, paddingBottom: value })
 	}
 };
 

@@ -5,7 +5,7 @@ const ArticlesHeaderContainer = styled.header(
 	({ theme: { space, sizes } }) => css`
 		display: grid;
 		align-content: center;
-		max-width: ${sizes['w-500']};
+		max-width: ${sizes['w-700']};
 		row-gap: calc(2 * ${space.md});
 	`
 );

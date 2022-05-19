@@ -38,7 +38,7 @@ const ArticleContainer = styled.a(
 
 		${t.media.bp1} {
 			display: inline-grid;
-			grid-template-columns: 0.4fr 1fr;
+			grid-template-columns: 0.4fr 0.6fr;
 			column-gap: ${t.space.md};
 		}
 	`

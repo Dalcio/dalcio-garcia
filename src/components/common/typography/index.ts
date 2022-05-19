@@ -1,4 +1,4 @@
-import useRoute from '@hooks/useRoute';
+import { Theme } from '@styles';
 import styled, { css } from 'styled-components';
 
 export const Text = styled.p(
@@ -38,16 +38,21 @@ export const Subtitle = styled.p<{
 type TitleProps = {
 	type?: 'big' | 'meddium' | 'small';
 	underline?: boolean;
+	lineColor?: keyof Theme['colors'];
+	color?: keyof Theme['colors'];
 };
 
 export const Title = styled.h1<TitleProps>(
 	({
 		type,
 		underline,
+		lineColor,
+		color,
 		theme: { space, colors, fontSizes, fontWeights }
 	}) => css`
 		font-size: ${fontSizes['3xl']};
 		line-height: 1.5;
+		color: ${colors[color ?? 'text']};
 
 		${underline &&
 		css`
@@ -60,7 +65,7 @@ export const Title = styled.h1<TitleProps>(
 				height: 3px;
 				width: 10%;
 				margin-top: ${space.md};
-				background: ${colors.border};
+				background: ${colors[lineColor ?? 'border']};
 			}
 		`}
 

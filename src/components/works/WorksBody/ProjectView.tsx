@@ -6,61 +6,62 @@ type ProjectViewProps = {
 	desc: string;
 	github?: string;
 	page?: string;
-	cover: string;
+	date: string;
 	stack?: string;
 };
 
-export const ProjectViewContainer = styled.div<{ cover: string }>(
-	({ cover, theme: t }) => css`
+export const ProjectViewContainer = styled.div(
+	({ theme: t }) => css`
+		display: flex;
+		flex-direction: column;
+		gap: ${t.space.md};
+		padding: calc(2 * ${t.space.md});
+		border: 1px solid transparent;
 		transition: all ${t.transitions.xFast} ease-in;
-		border: 1px solid ${t.colors.border};
-		display: grid;
-		grid-template-rows: auto 1fr;
 
-		&:hover {
-			box-shadow: 0px 0px 10px #a5a7af;
-			transform: scale(1.04);
+		.desc > footer {
+			grid-area: footer;
+			font-weight: bold;
 		}
 
-		.inner-container {
+		.btns {
 			display: grid;
-			background: ${t.colors.works};
-			grid-template-rows: 1fr auto;
-			gap: ${t.space.md};
-			padding: calc(2 * ${t.space.md});
+			grid-template-columns: 1fr 1fr;
+			column-gap: ${t.space.md};
 
-			.about {
-				display: grid;
-				row-gap: ${t.space.md};
-				grid-template-rows: auto 1fr auto;
+			grid-area: btns;
 
-				footer {
-					font-weight: bold;
-				}
+			a,
+			button {
+				width: 100%;
 			}
-
-			.btns {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				column-gap: ${t.space.md};
-
-				a,
-				button {
-					width: 100%;
-				}
-			}
-		}
-
-		.cover {
-			width: 100%;
-			height: 200px;
-			background: ${t.colors.works} ${cover} no-repeat;
 		}
 
 		${t.media.bp1} {
-			.cover {
-				height: 250px;
+			display: grid;
+			gap: ${t.space.md};
+			grid-template-areas:
+				'head desc'
+				'head desc'
+				'empty btns';
+			grid-template-columns: 0.4fr 0.6fr;
+
+			.head {
+				grid-area: head;
 			}
+
+			.desc {
+				grid-area: desc;
+			}
+
+			.btns {
+				grid-area: btns;
+			}
+		}
+
+		&:hover {
+			box-shadow: 0px 0px 10px #a5a7af;
+			border-color: ${t.colors.border};
 		}
 	`
 );
@@ -68,32 +69,34 @@ export const ProjectViewContainer = styled.div<{ cover: string }>(
 export default function ProjectView({
 	name,
 	desc,
-	cover,
+	date,
 	github,
 	page,
 	stack
 }: ProjectViewProps) {
 	return (
-		<ProjectViewContainer cover={`url('${cover}')`}>
-			<div className="cover" />
-			<div className="inner-container">
-				<div className="about">
-					<Subtitle type="subtitle-2">{name}</Subtitle>
-					<div>{desc}</div>
-					{stack && <footer>{stack}</footer>}
-				</div>
-				<div className="btns">
-					{github && (
-						<a href={github} target="blank">
-							<Button bg="works">Github</Button>
-						</a>
-					)}
-					{page && (
-						<a href={page} target="blank">
-							<Button bg="works">Visit</Button>
-						</a>
-					)}
-				</div>
+		<ProjectViewContainer>
+			<div className="head">
+				<Subtitle className="date">{date}</Subtitle>
+				<Title type="small" className="title">
+					{name}
+				</Title>
+			</div>
+			<div className="desc">
+				<div>{desc}</div>
+				{stack && <footer>{stack}</footer>}
+			</div>
+			<div className="btns">
+				{github && (
+					<a href={github} target="blank">
+						<Button bg="works">Github</Button>
+					</a>
+				)}
+				{page && (
+					<a href={page} target="blank">
+						<Button bg="works">Visit</Button>
+					</a>
+				)}
 			</div>
 		</ProjectViewContainer>
 	);
