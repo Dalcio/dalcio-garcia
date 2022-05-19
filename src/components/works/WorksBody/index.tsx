@@ -1,4 +1,4 @@
-import { Title } from '@components/common';
+import { Button, Title } from '@components/common';
 import styled, { css } from 'styled-components';
 import ProjectView from './ProjectView';
 
@@ -8,6 +8,12 @@ const WorksBodyContainer = styled.main(
 		align-content: center;
 		max-width: unset !important;
 		row-gap: calc(2 * ${space.md});
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			display: grid;
+		}
 
 		.intro {
 			max-width: ${sizes['w-700']};
@@ -55,6 +61,9 @@ export default function WorksBody() {
 					date="June, 10 2022"
 				/>
 			</div>
+			<a href="https://github.com/dalcio/" target="blank">
+				<Button bg="works">View More onGithub</Button>
+			</a>
 		</WorksBodyContainer>
 	);
 }

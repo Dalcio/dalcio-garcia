@@ -1,12 +1,10 @@
 import { Button, Title, Text } from '@components/common';
 import { Article } from '@components/articles/ArticlesBody';
 
-import awesomeData from '@data/awesome-things';
 import Link from 'next/link';
+import ProjectView from '@components/works/WorksBody/ProjectView';
 
 import { HomeBodyContainer } from './styles';
-
-import AwesomeThing from './AwesomeThing';
 
 export default function HomeBody() {
 	return (
@@ -35,9 +33,24 @@ export default function HomeBody() {
 					</Text>
 				</div>
 				<div className="the-things">
-					{awesomeData.map((props) => (
-						<AwesomeThing {...props} key={props.name} />
-					))}
+					<ProjectView
+						className="home"
+						name="Project Name"
+						desc="vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. "
+						github="https://github.com/dalcio"
+						page="https://linkedin.com/in/dalcio"
+						stack="React, styled components, ...."
+						date="June, 10 2022"
+					/>
+					<Title type="small">Some articles</Title>
+					<Article
+						home
+						className="article-from-home"
+						date="May 11 2022"
+						name="Name of the Article"
+						link="https://es.lipsum.com/"
+						desc="El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo Contenido aquí, contenido aqu"
+					/>
 					<Article
 						home
 						className="article-from-home"

@@ -8,6 +8,7 @@ type ProjectViewProps = {
 	page?: string;
 	date: string;
 	stack?: string;
+	className?: string | 'home';
 };
 
 export const ProjectViewContainer = styled.div(
@@ -15,7 +16,6 @@ export const ProjectViewContainer = styled.div(
 		display: flex;
 		flex-direction: column;
 		gap: ${t.space.md};
-		padding: calc(2 * ${t.space.md});
 		border: 1px solid transparent;
 		transition: all ${t.transitions.xFast} ease-in;
 
@@ -59,8 +59,15 @@ export const ProjectViewContainer = styled.div(
 			}
 		}
 
+		&:not(&.home) {
+			padding: calc(2 * ${t.space.md});
+		}
+
 		&:hover {
-			box-shadow: 0px 0px 10px #a5a7af;
+			padding: calc(2 * ${t.space.md});
+			&:not(&.home) {
+				box-shadow: 0px 0px 10px #a5a7af;
+			}
 			border-color: ${t.colors.border};
 		}
 	`
@@ -72,10 +79,11 @@ export default function ProjectView({
 	date,
 	github,
 	page,
-	stack
+	stack,
+	className
 }: ProjectViewProps) {
 	return (
-		<ProjectViewContainer>
+		<ProjectViewContainer className={className}>
 			<div className="head">
 				<Subtitle className="date">{date}</Subtitle>
 				<Title type="small" className="title">
