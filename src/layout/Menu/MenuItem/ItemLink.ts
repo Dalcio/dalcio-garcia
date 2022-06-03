@@ -38,7 +38,7 @@ const ItemLink = styled.a<{ color: Routes }>`
 				display: inline-block;
 				background: ${colors[ROUTES[color] ?? 'home']};
 				color: ${colors.text};
-				animation: ${rotateLetter} ${transitions.slow} ease-in;
+				// animation: ${rotateLetter} ${transitions.slow} ease-in;
 			}
 
 			&:after {
@@ -48,7 +48,7 @@ const ItemLink = styled.a<{ color: Routes }>`
 				right: ${space.md};
 				border: 1px solid ${colors[ROUTES[color] ?? 'home']};
 				background: ${colors[ROUTES[color] ?? 'home']};
-				animation: ${fadeInLeftToRight} ${transitions.slow} ease-in;
+				// animation: ${fadeInLeftToRight} ${transitions.slow} ease-in;
 			}
 		}
 	`};

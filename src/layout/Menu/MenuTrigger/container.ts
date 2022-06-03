@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
 import { Theme } from '@styles';
 
-import { apeerLetter } from './keyframes';
+import { aperLetter } from './keyframes';
 
 import createSpanAnDelay from './createSpanAnDelay';
 
 const btnCloseCss = (theme: Theme) => css`
 	& > .btn-close {
-		position: relative;
+		margin-top: calc(${theme.space.lg} + ${theme.space.md} - 2px);
+		margin-left: calc(${theme.space.lg} + ${theme.space.md} - 2px);
 		z-index: 110;
 
 		display: inline-block;
@@ -18,11 +19,12 @@ const btnCloseCss = (theme: Theme) => css`
 
 		&:hover {
 			font-size: 14px;
+			border-bottom: 2px solid ${theme.colors.text};
 		}
 
 		& > span {
 			display: inline-block;
-			animation: ${apeerLetter} ${theme.transitions.fast} ease-in-out;
+			animation: ${aperLetter} ${theme.transitions.fast} ease-in-out;
 		}
 
 		${createSpanAnDelay()}
@@ -32,8 +34,12 @@ const btnCloseCss = (theme: Theme) => css`
 const btnOpenCss = (theme: Theme) => css`
 	& > .btn-open {
 		overflow: hidden;
-		display: grid;
-		row-gap: ${theme.space.sm};
+		height: 30px;
+		width: 30px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
 		& > div {
 			width: 14px;
@@ -47,7 +53,7 @@ const btnOpenCss = (theme: Theme) => css`
 		}
 
 		& > div:first-of-type {
-			transform: translatex(12px);
+			transform: translateX(12px);
 		}
 
 		&:hover {
@@ -58,7 +64,7 @@ const btnOpenCss = (theme: Theme) => css`
 
 			& > div:first-of-type {
 				transform-origin: right center;
-				transform: translatex(12px) scaleX(2);
+				transform: translateX(12px) scaleX(2);
 			}
 		}
 	}
@@ -66,23 +72,23 @@ const btnOpenCss = (theme: Theme) => css`
 
 const MenuTriggerContainer = styled.button`
 	cursor: pointer;
-	position: relative;
+	outline: unset;
 	background: none;
 	border: none;
+	padding: 0;
+
+	display: flex;
 
 	${({ theme }) => css`
-		left: calc(2 * ${theme.space.md});
-
 		.close-pane {
 			position: fixed;
-			/* z-index: 1 !important; */
 			background: ${theme.colors.primary};
 			inset: calc(2 * ${theme.space.md});
 			opacity: 0.4;
 		}
 
-		${btnCloseCss(theme)}
-		${btnOpenCss(theme)}
+		${btnOpenCss(theme)};
+		${btnCloseCss(theme)};
 	`}
 `;
 

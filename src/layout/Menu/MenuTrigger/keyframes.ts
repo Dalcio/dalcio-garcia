@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components';
 
-export const apeerLetter = keyframes`
+export const aperLetter = keyframes`
 from {
   transform: translateY(12px);
 }

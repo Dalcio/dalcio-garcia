@@ -26,7 +26,7 @@ type MenuTriggerPros = {
 
 export default function MenuTrigger({ open, onCLick }: MenuTriggerPros) {
 	return (
-		<MenuTriggerContainer onClick={onCLick}>
+		<MenuTriggerContainer aria-label="Menu trigger" onClick={onCLick}>
 			{(open && close) || hamburgerBtn}
 		</MenuTriggerContainer>
 	);

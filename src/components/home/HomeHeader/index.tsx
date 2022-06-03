@@ -13,8 +13,8 @@ export default function HomeHeader() {
 				<Title type="big">Dálcio Garcia.</Title>
 			</div>
 			<Subtitle className="self-intro">
-				I'm a junior developer passionate about creating the front end of{' '}
-				<strong>web</strong> and <strong>mobile</strong> apps.
+				I'm a <i>Software Engineer</i> passionate about creating the front end
+				of <strong>web</strong> and <strong>mobile</strong> apps.
 			</Subtitle>
 		</HomeHeaderContainer>
 	);
