@@ -7,10 +7,10 @@ import HireMe from './HireMe';
 
 const layoutHelpers = (
 	<>
-		<div className="border-axys border-x" />
-		<div className="border-axys border-y" />
-		<div className="diagonal-axys top-diagonal" />
-		<div className="diagonal-axys bottom-diagonal" />
+		<div className="border-axes border-x" />
+		<div className="border-axes border-y" />
+		<div className="diagonal-axes top-diagonal" />
+		<div className="diagonal-axes bottom-diagonal" />
 	</>
 );
 

@@ -8,7 +8,7 @@ export type ButtonProps = {
 const ButtonContainer = styled.button<ButtonProps>`
 	${({
 		bg,
-		theme: { colors, space, borders, transitions, letterSpacings }
+		theme: { colors, radii, space, borders, transitions, letterSpacings }
 	}) => css`
 		background: none;
 		cursor: pointer;
@@ -31,7 +31,9 @@ const ButtonContainer = styled.button<ButtonProps>`
 			bottom: -${space.sm};
 			right: -${space.sm};
 			border: ${borders['hand-drawn-1']};
-			background: ${colors[ROUTES[bg] ?? 'home']};
+			border-radius: ${radii['round-md']};
+			// background: ${colors[ROUTES[bg] ?? 'home']};
+			background: ${colors.white};
 			transition: all ${transitions.fast} ease;
 		}
 
@@ -47,12 +49,13 @@ const ButtonContainer = styled.button<ButtonProps>`
 			height: 100%;
 			width: 100%;
 			padding: ${space.md};
-			letter-tpacing: ${letterSpacings.wide};
+			letter-spacing: ${letterSpacings.wide};
 			text-transform: uppercase;
 			text-align: center;
 			position: relative;
 			z-index: 2;
 			background: ${colors[`on-${ROUTES[bg] ?? 'home'}`]};
+			border-radius: ${radii['round-md']};
 			border: ${borders['hand-drawn-1']};
 			color: ${borders['hand-drawn-1']};
 		}

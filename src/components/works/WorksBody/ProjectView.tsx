@@ -13,6 +13,7 @@ type ProjectViewProps = {
 
 export const ProjectViewContainer = styled.div(
 	({ theme: t }) => css`
+		min-height: 245px;
 		display: flex;
 		flex-direction: column;
 		gap: ${t.space.md};
@@ -63,12 +64,22 @@ export const ProjectViewContainer = styled.div(
 			padding: calc(2 * ${t.space.md});
 		}
 
-		&:hover {
+		@media (hover: none) {
 			padding: calc(2 * ${t.space.md});
 			&:not(&.home) {
 				box-shadow: 0px 0px 10px #a5a7af;
 			}
 			border-color: ${t.colors.border};
+			border-radius: ${t.radii['round-md']};
+		}
+
+		&:hover {
+			padding: calc(2 * ${t.space.md});
+			// &:not(&.home) {
+			// 	box-shadow: 0px 0px 10px #a5a7af;
+			// }
+			border-color: ${t.colors.border};
+			border-radius: ${t.radii['round-md']};
 		}
 	`
 );
