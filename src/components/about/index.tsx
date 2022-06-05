@@ -1,11 +1,2 @@
-import AboutBody from './AboutBody';
-import AboutHeader from './AboutHeader';
-
-const About = () => (
-	<>
-		<AboutHeader />
-		<AboutBody />
-	</>
-);
-
-export default About;
+export { default as AboutBody } from './AboutBody';
+export { default as AboutHeader } from './AboutHeader';

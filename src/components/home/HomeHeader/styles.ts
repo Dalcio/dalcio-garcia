@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const HomeHeaderContainer = styled.header(
+export const HomeHeaderContainer = styled.div(
 	({ theme: { space, radii, colors, media } }) => css`
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		row-gap: calc(2 * ${space.lg});
 		justify-content: center;
-		align-items: center;
+
 		text-align: center;
 
 		.avatar {
@@ -19,7 +20,7 @@ export const HomeHeaderContainer = styled.header(
 				left: calc(15%);
 				background: ${colors.menu};
 				transform: skew(-8deg, -8deg);
-				border-radius: ${radii['rround-sm']};
+				border-radius: ${radii['round-sm']};
 			}
 
 			#avatar {
@@ -34,6 +35,9 @@ export const HomeHeaderContainer = styled.header(
 		}
 
 		${media.bp1} {
+			display: grid;
+			justify-content: center;
+			align-items: center;
 			grid-template-areas:
 				'avatar greetings empty'
 				'avatar self-intro empty';
@@ -67,6 +71,12 @@ export const HomeHeaderContainer = styled.header(
 			.self-intro {
 				grid-area: self-intro;
 				align-self: start;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			.self-intro {
+				display: none;
 			}
 		}
 	`

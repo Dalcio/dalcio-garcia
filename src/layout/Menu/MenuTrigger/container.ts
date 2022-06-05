@@ -42,18 +42,18 @@ const btnOpenCss = (theme: Theme) => css`
 		justify-content: space-between;
 
 		& > div {
-			width: 14px;
+			width: 18px;
 			height: 2px;
 			background: ${theme.colors.primary};
 			transition: transform 1s ease;
 		}
 
 		& > div:nth-of-type(2) {
-			width: 26px;
+			width: 100%;
 		}
 
 		& > div:first-of-type {
-			transform: translateX(12px);
+			transform: translateX(18px);
 		}
 
 		&:hover {
@@ -64,7 +64,7 @@ const btnOpenCss = (theme: Theme) => css`
 
 			& > div:first-of-type {
 				transform-origin: right center;
-				transform: translateX(12px) scaleX(2);
+				transform: translateX(18px) scaleX(2);
 			}
 		}
 	}

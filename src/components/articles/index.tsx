@@ -1,11 +1,2 @@
-import ArticlesBody from './ArticlesBody';
-import ArticlesHeader from './ArticlesHeader';
-
-const Articles = () => (
-	<>
-		<ArticlesHeader />
-		<ArticlesBody />
-	</>
-);
-
-export default Articles;
+export { default as ArticlesBody } from './ArticlesBody';
+export { default as ArticlesHeader } from './ArticlesHeader';

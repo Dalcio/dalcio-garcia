@@ -2,7 +2,7 @@ import { Button, Title } from '@components/common';
 import styled, { css } from 'styled-components';
 import ProjectView from './ProjectView';
 
-const WorksBodyContainer = styled.main(
+const WorksBodyContainer = styled.div(
 	({ theme: { space, sizes, media } }) => css`
 		display: grid;
 		align-content: center;

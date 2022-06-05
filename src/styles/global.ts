@@ -13,22 +13,7 @@ const GlobalStyles = createGlobalStyle(
 			background: ${colors.white};
 			color: ${colors.text};
 			font: ${fontSizes.tiny} ${fonts.untitled};
-
-			&:before,
-			&:after {
-				content: '';
-				position: fixed;
-				background: ${colors.white};
-				top: 0;
-				bottom: 0;
-				width: calc(2 * ${space.md});
-			}
-			&:before {
-				left: 0;
-			}
-			&:after {
-				right: 0;
-			}
+			overflow-x: hidden !important;
 		}
 	`
 );

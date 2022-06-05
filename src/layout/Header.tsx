@@ -1,19 +1,17 @@
 import { Subtitle } from '@components/common';
-import ROUTES, { Routes } from '@constants/routes';
+import { Routes } from '@constants/routes';
 import { theme } from '@styles';
-
 import styled, { css } from 'styled-components';
 
 import Menu from './Menu';
 
-const Wrapper = styled.div<{ page: Routes }>(
-	({ page, theme: { colors, media, space, sizes, zIndices } }) => css`
+const Wrapper = styled.div(
+	({ theme: { colors, zIndices } }) => css`
 		position: fixed;
 		z-index: ${zIndices['z-20']};
-		left: calc(2 * ${space.md});
-		right: calc(2 * ${space.md});
+		width: 100%;
 
-		background: ${colors[ROUTES[page] ?? 'home']};
+		background: ${colors.secondaryBackground};
 
 		display: flex;
 		justify-content: center;
@@ -21,7 +19,7 @@ const Wrapper = styled.div<{ page: Routes }>(
 		& > .header-container {
 			width: 100%;
 			max-width: ${theme.sizes['w-max']};
-			padding: ${space.lg} calc(3 * ${theme.space.md});
+			padding: calc(3 * ${theme.space.md}) 0;
 
 			display: flex;
 			justify-content: space-between;
@@ -32,7 +30,7 @@ const Wrapper = styled.div<{ page: Routes }>(
 
 export default function Header({ page }: { page: Routes }) {
 	return (
-		<Wrapper page={page}>
+		<Wrapper>
 			<div className="header-container">
 				<Menu />
 				<Subtitle className="current-page-name">

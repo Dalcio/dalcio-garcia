@@ -1,4 +1,5 @@
-import About from '@components/about';
+import { AboutBody, AboutHeader } from '@components/about';
+
 import Head from 'next/head';
 
 export default function AboutPage() {
@@ -7,7 +8,12 @@ export default function AboutPage() {
 			<Head>
 				<title>Knowing Dálcio Garcia</title>
 			</Head>
-			<About />
+			<section className="page-cover">
+				<AboutHeader />
+			</section>
+			<main>
+				<AboutBody />
+			</main>
 		</>
 	);
 }

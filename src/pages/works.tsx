@@ -1,4 +1,5 @@
-import Works from '@components/works';
+import { WorksBody, WorksHeader } from '@components/works';
+
 import Head from 'next/head';
 
 export default function WorksPage() {
@@ -7,7 +8,12 @@ export default function WorksPage() {
 			<Head>
 				<title>My Works</title>
 			</Head>
-			<Works />
+			<section className="page-cover">
+				<WorksHeader />
+			</section>
+			<main>
+				<WorksBody />
+			</main>
 		</>
 	);
 }

@@ -1,4 +1,5 @@
-import Articles from '@components/articles';
+import { ArticlesBody, ArticlesHeader } from '@components/articles';
+
 import Head from 'next/head';
 
 export default function ArticlesPage() {
@@ -7,7 +8,12 @@ export default function ArticlesPage() {
 			<Head>
 				<title>My Articles</title>
 			</Head>
-			<Articles />
+			<section className="page-cover">
+				<ArticlesHeader />
+			</section>
+			<main>
+				<ArticlesBody />
+			</main>
 		</>
 	);
 }

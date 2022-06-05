@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const HomeBodyContainer = styled.main`
+export const HomeBodyContainer = styled.div`
 	${({ theme: { space, sizes, media } }) => css`
+		.self-intro {
+			margin-bottom: calc(2 * ${space.lg});
+		}
+
 		& > .intro {
 			max-width: ${sizes['w-700']};
 			display: grid;
@@ -31,6 +35,11 @@ export const HomeBodyContainer = styled.main`
 						column-gap: ${space.lg};
 					}
 				}
+			}
+		}
+		@media screen and (min-width: 400px) {
+			.self-intro {
+				display: none;
 			}
 		}
 	`}

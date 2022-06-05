@@ -1,4 +1,4 @@
-import { Button, Title, Text } from '@components/common';
+import { Button, Title, Text, Subtitle } from '@components/common';
 import { Article } from '@components/articles/ArticlesBody';
 
 import Link from 'next/link';
@@ -9,6 +9,10 @@ import { HomeBodyContainer } from './styles';
 export default function HomeBody() {
 	return (
 		<HomeBodyContainer>
+			<Subtitle className="self-intro">
+				I'm a <i>Software Engineer</i> passionate about creating the front end
+				of <strong>web</strong> and <strong>mobile</strong> apps.
+			</Subtitle>
 			<div className="intro">
 				<Title underline>Let´s build something awesome together.</Title>
 				<div className="intro-content">

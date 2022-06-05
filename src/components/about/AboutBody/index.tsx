@@ -13,7 +13,7 @@ const SectionBody = ({ content }: { content: string }) => (
 export default function AboutBody() {
 	return (
 		<AboutBodyContainer>
-			<div className="my-jouney">
+			<div className="my-journey">
 				<Text>
 					I'm a Computer Engineering student at{' '}
 					<abbr title="Instituto Superior Politécnico de Tecnologias e Ciências">

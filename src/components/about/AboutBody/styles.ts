@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-export const AboutBodyContainer = styled.main(
+export const AboutBodyContainer = styled.div(
 	({ theme: t }) => css`
-		& > .my-jouney {
+		& > .my-journey {
 			max-width: ${t.sizes['w-700']};
 		}
 

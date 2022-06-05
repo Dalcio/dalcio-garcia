@@ -1,18 +1,8 @@
-import { Title, Text } from '@components/common';
-import styled, { css } from 'styled-components';
-
-const WorksHeaderContainer = styled.header(
-	({ theme: { space, sizes } }) => css`
-		display: grid;
-		align-content: center;
-		max-width: ${sizes['w-700']};
-		row-gap: calc(2 * ${space.md});
-	`
-);
+import { Title, Text, HeaderContainer } from '@components/common';
 
 export default function WorksHeader() {
 	return (
-		<WorksHeaderContainer>
+		<HeaderContainer>
 			<Title type="big" underline>
 				My works
 			</Title>
@@ -24,6 +14,6 @@ export default function WorksHeader() {
 				trying to deliver accessible services, trying to reach as many people as
 				possible.
 			</Text>
-		</WorksHeaderContainer>
+		</HeaderContainer>
 	);
 }

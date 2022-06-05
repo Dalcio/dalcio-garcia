@@ -1,4 +1,5 @@
-import Home from '@components/home';
+import { HomeBody, HomeHeader } from '@components/home';
+
 import Head from 'next/head';
 
 export default function HomePage() {
@@ -7,7 +8,12 @@ export default function HomePage() {
 			<Head>
 				<title>Dálcio Garcia - Frontend Developer</title>
 			</Head>
-			<Home />
+			<section className="page-cover">
+				<HomeHeader />
+			</section>
+			<main>
+				<HomeBody />
+			</main>
 		</>
 	);
 }

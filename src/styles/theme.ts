@@ -3,20 +3,18 @@ export const theme = {
 		text: '#000',
 		primary: '#3f3f3f',
 		border: '#a5a7af',
-		white: '#f4f9fc',
+		// border: '#83C9F4',
 		menu: '#e1efd8',
 
-		home: '#E1EEF6',
-		'on-home': '#ddeaf6',
+		white: '#f4f9fc',
+		black: '#000000',
 
-		about: '#FEF3D3',
-		'on-about': '#fff2cc',
+		blue: ['#D9F0FF', '#A3D5FF', '#83C9F4'],
 
-		articles: '#DCE3EA',
-		'on-articles': '#fdba30',
-
-		works: '#DBE4F4',
-		'on-works': '#d8e2f3'
+		background: '#fff',
+		onBackground: '#000',
+		secondaryBackground: '#83c9f4',
+		onSecondaryBackground: '#000'
 	},
 	space: {
 		sm: '5px',
@@ -49,9 +47,8 @@ export const theme = {
 		light: 300,
 		normal: 400,
 		medium: 500,
-		semibold: 600,
+		'semi-bold': 600,
 		bold: 700,
-		extrabold: 800,
 		'extra-bold': 800,
 		black: 900
 	},
@@ -95,7 +92,7 @@ export const theme = {
 	radii: {
 		'hand-drawn': '255px 15px 225px 15px/15px 225px 15px 255px',
 		'round-none': '0px',
-		'rround-sm': '0.125rem' /* 2px */,
+		'round-sm': '0.125rem' /* 2px */,
 		round: '0.25rem' /* 4px */,
 		'round-md': '0.375rem' /* 6px */,
 		'round-lg': '0.5rem' /* 8px */,
