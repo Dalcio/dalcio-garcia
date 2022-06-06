@@ -1,5 +1,5 @@
 import { Subtitle } from '@components/common';
-import { TriangleRightIcon, ChatBubbleIcon } from '@radix-ui/react-icons';
+import { ChatBubbleIcon } from '@radix-ui/react-icons';
 import styled, { css } from 'styled-components';
 
 const HireMeContainer = styled('a')(
@@ -15,27 +15,58 @@ const HireMeContainer = styled('a')(
 		text-decoration: none;
 		color: ${t.colors.text};
 
-		:hover {
-			.label {
-				letter-spacing: 3px;
-			}
+		.back-ball {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			background: ${t.colors.blue[1]};
+			border: 1px solid #fff;
 		}
 
 		.ico {
-			border-radius: 50%;
-			padding: ${t.space.md};
-			background: ${t.colors.white};
 			position: relative;
 			z-index: 200;
-			box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.7);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+
+			display: grid;
+			place-items: center;
+
+			& > * {
+				stroke: 2px;
+				display: block;
+			}
+			background: ${t.colors.white};
+			border: 1px solid #fff;
 		}
 
 		.label {
-			transition: all 200ms ease-in-out;
-			padding: ${t.space.sm};
-			margin-right: ${t.space.sm};
-			text-decoration: underline;
-			text-transform: uppercase;
+			padding: ${t.space.md} ${t.space.lg};
+			border: 1px solid #fff;
+			border-radius: ${t.radii.lg};
+			background: ${t.colors.blue[1]};
+		}
+
+		:hover {
+			/* .label {
+				letter-spacing: 3px;
+				transition: all 200ms ease-in-out;
+			} */
+
+			/* div {
+				transform: scale(1.2);
+				transform-origin: center;
+				transition: all 200ms ease-in-out;
+			} */
+			.ico {
+				transform: scale(1.2);
+				transform-origin: center;
+				transition: all 200ms ease-in-out;
+			}
 		}
 	`
 );
@@ -46,7 +77,8 @@ const href =
 export default function HireMe() {
 	return (
 		<HireMeContainer href={href}>
-			<Subtitle className="label">Hire Me</Subtitle>
+			<Subtitle className="label">Hire me</Subtitle>
+			<div className="back-ball" />
 			<div className="ico">
 				<ChatBubbleIcon />
 			</div>

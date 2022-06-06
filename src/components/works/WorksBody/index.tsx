@@ -6,7 +6,6 @@ const WorksBodyContainer = styled.div(
 	({ theme: { space, sizes, media } }) => css`
 		display: grid;
 		align-content: center;
-		max-width: unset !important;
 		row-gap: calc(2 * ${space.md});
 
 		a {

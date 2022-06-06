@@ -4,8 +4,17 @@ const HeaderContainer = styled.div(
 	({ theme: { space, sizes } }) => css`
 		display: grid;
 		align-content: center;
-		max-width: ${sizes['w-700']};
+		justify-items: start;
+		max-width: ${sizes['w-max']};
 		row-gap: calc(2 * ${space.md});
+
+		& button {
+			width: min(416px, 100%);
+
+			.btn-content {
+				background: #fff;
+			}
+		}
 	`
 );
 

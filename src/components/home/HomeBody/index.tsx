@@ -14,7 +14,9 @@ export default function HomeBody() {
 				of <strong>web</strong> and <strong>mobile</strong> apps.
 			</Subtitle>
 			<div className="intro">
-				<Title underline>Let´s build something awesome together.</Title>
+				<Title underline color="2">
+					Let´s build something awesome together.
+				</Title>
 				<div className="intro-content">
 					<Text>
 						From mobile app to web app, desktop app or{' '}
@@ -28,7 +30,7 @@ export default function HomeBody() {
 				</Button>
 			</div>
 			<div className="awesome-things">
-				<Title type="small">Open Things</Title>
+				<Title type="small">Some projects</Title>
 				<div className="awesome-intro">
 					<Text>
 						When I have some time, I like to create open source stuff to

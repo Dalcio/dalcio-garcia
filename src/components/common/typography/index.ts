@@ -1,4 +1,4 @@
-import { Theme } from '@styles';
+import { Colors } from '@styles';
 import styled, { css } from 'styled-components';
 
 export const Text = styled.p(
@@ -36,23 +36,25 @@ export const Subtitle = styled.p<{
 );
 
 type TitleProps = {
-	type?: 'big' | 'meddium' | 'small';
+	type?: 'big' | 'medium' | 'small';
 	underline?: boolean;
-	lineColor?: keyof Theme['colors'];
-	color?: keyof Theme['colors'];
+	underlineColor?: '0' | '1' | '2' | Colors;
+	color?: '0' | '1' | '2' | Colors;
 };
 
 export const Title = styled.h1<TitleProps>(
 	({
 		type,
 		underline,
-		lineColor,
 		color,
+		underlineColor,
 		theme: { space, colors, fontSizes, fontWeights }
 	}) => css`
 		font-size: ${fontSizes['3xl']};
 		line-height: 1.5;
-		color: ${colors[color ?? 'text']};
+		color: ${['0', '1', '2'].includes(color)
+			? colors.blue[color]
+			: colors[color ?? 'text']};
 
 		${underline &&
 		css`
@@ -65,7 +67,9 @@ export const Title = styled.h1<TitleProps>(
 				height: 3px;
 				width: 10%;
 				margin-top: ${space.md};
-				background: ${colors[lineColor ?? 'border']};
+				background: ${['0', '1', '2'].includes(underlineColor)
+					? colors.blue[underlineColor]
+					: (underlineColor && colors[underlineColor]) || colors.blue[0]};
 			}
 		`}
 
@@ -75,7 +79,7 @@ export const Title = styled.h1<TitleProps>(
 					return css`
 						font-weight: ${fontWeights['extra-bold']};
 					`;
-				case 'meddium':
+				case 'medium':
 					return css`
 						font-weight: 600;
 					`;

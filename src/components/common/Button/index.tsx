@@ -1,19 +1,15 @@
 import ROUTES, { Routes } from '@constants/routes';
 import styled, { css } from 'styled-components';
 
-export type ButtonProps = {
-	bg?: Routes;
-};
-
-const ButtonContainer = styled.button<ButtonProps>`
+const ButtonContainer = styled.button`
 	${({
-		bg,
 		theme: { colors, radii, space, borders, transitions, letterSpacings }
 	}) => css`
 		background: none;
 		cursor: pointer;
 		outline: none;
 		border: none;
+		height: 46px;
 
 		& * {
 			text-decoration: none !important;
@@ -28,12 +24,11 @@ const ButtonContainer = styled.button<ButtonProps>`
 			z-index: 1;
 			width: 100%;
 			height: 100%;
-			bottom: -${space.sm};
-			right: -${space.sm};
-			border: ${borders['hand-drawn-1']};
-			border-radius: ${radii['round-md']};
-			// background: ${colors[ROUTES[bg] ?? 'home']};
-			background: ${colors.white};
+			bottom: -${space.md};
+			right: -${space.md};
+
+			background: ${colors.blue[0]};
+			border-radius: ${radii.sm};
 			transition: all ${transitions.fast} ease;
 		}
 
@@ -54,16 +49,21 @@ const ButtonContainer = styled.button<ButtonProps>`
 			text-align: center;
 			position: relative;
 			z-index: 2;
-			background: ${colors[`on-${ROUTES[bg] ?? 'home'}`]};
-			border-radius: ${radii['round-md']};
-			border: ${borders['hand-drawn-1']};
-			color: ${borders['hand-drawn-1']};
+			background: ${colors.blue[1]};
+			border-radius: ${radii.sm};
+			color: ${colors.onBackground};
+
+			display: grid;
+			place-items: center;
+			& > * {
+				display: block;
+			}
 		}
 	`}
 `;
 
-const Button = ({ children, ...props }) => (
-	<ButtonContainer {...props}>
+const Button = ({ children }) => (
+	<ButtonContainer>
 		<div className="btn-content">{children}</div>
 	</ButtonContainer>
 );

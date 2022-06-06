@@ -15,11 +15,11 @@ const Wrapper = styled.div(
 
 		display: flex;
 		justify-content: center;
+		padding: calc(3 * ${theme.space.md});
 
 		& > .header-container {
 			width: 100%;
 			max-width: ${theme.sizes['w-max']};
-			padding: calc(3 * ${theme.space.md}) 0;
 
 			display: flex;
 			justify-content: space-between;

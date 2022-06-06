@@ -7,7 +7,7 @@ export const HomeBodyContainer = styled.div`
 		}
 
 		& > .intro {
-			max-width: ${sizes['w-700']};
+			max-width: ${sizes['w-max']};
 			display: grid;
 
 			.intro-content {
@@ -20,7 +20,7 @@ export const HomeBodyContainer = styled.div`
 			margin-top: calc(4 * ${space.lg});
 
 			.awesome-intro {
-				max-width: ${sizes['w-700']};
+				max-width: ${sizes['w-max']};
 				margin-top: ${space.lg};
 				margin-bottom: calc(2 * ${space.lg});
 			}

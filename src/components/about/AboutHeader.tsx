@@ -1,19 +1,9 @@
-import { Button, Title, Text } from '@components/common';
-import styled, { css } from 'styled-components';
-
-const AboutHeaderContainer = styled.header(
-	({ theme: { space, sizes } }) => css`
-		display: grid;
-		align-content: center;
-		max-width: ${sizes['w-700']};
-		row-gap: calc(2 * ${space.md});
-	`
-);
+import { Button, Title, Text, HeaderContainer } from '@components/common';
 
 export default function AboutHeader() {
 	return (
-		<AboutHeaderContainer>
-			<Title type="big" underline>
+		<HeaderContainer>
+			<Title type="big" underline underlineColor="primary">
 				Who's Dálcio Garcia?
 			</Title>
 			<Text>
@@ -25,6 +15,6 @@ export default function AboutHeader() {
 					See My Resume
 				</a>
 			</Button>
-		</AboutHeaderContainer>
+		</HeaderContainer>
 	);
 }

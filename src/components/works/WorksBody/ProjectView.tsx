@@ -19,6 +19,10 @@ export const ProjectViewContainer = styled.div(
 		gap: ${t.space.md};
 		border: 1px solid transparent;
 		transition: all ${t.transitions.xFast} ease-in;
+		
+		.desc {
+			flex-grow: 1;
+		}
 
 		.desc > footer {
 			grid-area: footer;
@@ -46,6 +50,7 @@ export const ProjectViewContainer = styled.div(
 				'head desc'
 				'empty btns';
 			grid-template-columns: 0.4fr 0.6fr;
+			grid-template-rows: auto 1fr auto;
 
 			.head {
 				grid-area: head;
@@ -66,20 +71,14 @@ export const ProjectViewContainer = styled.div(
 
 		@media (hover: none) {
 			padding: calc(2 * ${t.space.md});
-			&:not(&.home) {
-				box-shadow: 0px 0px 10px #a5a7af;
-			}
 			border-color: ${t.colors.border};
 			border-radius: ${t.radii['round-md']};
 		}
 
 		&:hover {
 			padding: calc(2 * ${t.space.md});
-			// &:not(&.home) {
-			// 	box-shadow: 0px 0px 10px #a5a7af;
-			// }
 			border-color: ${t.colors.border};
-			border-radius: ${t.radii['round-md']};
+			border-radius: ${t.radii.sm};
 		}
 	`
 );
@@ -96,7 +95,7 @@ export default function ProjectView({
 	return (
 		<ProjectViewContainer className={className}>
 			<div className="head">
-				<Subtitle className="date">{date}</Subtitle>
+				<p className="date">{date}</p>
 				<Title type="small" className="title">
 					{name}
 				</Title>

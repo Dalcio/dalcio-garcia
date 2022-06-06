@@ -2,8 +2,8 @@ export const theme = {
 	colors: {
 		text: '#000',
 		primary: '#3f3f3f',
-		border: '#a5a7af',
-		// border: '#83C9F4',
+		// border: '#a5a7af',
+		border: '#83C9F4',
 		menu: '#e1efd8',
 
 		white: '#f4f9fc',
@@ -36,9 +36,7 @@ export const theme = {
 		'7xl': '5rem'
 	},
 	fonts: {
-		// untitled: 'Roboto, sans-serif',
-		untitled: 'Bitter, serif',
-		mono: 'Fira Code, monospace'
+		untitled: 'Roboto, sans-serif'
 	},
 	fontWeights: {
 		hairline: 100,
@@ -52,7 +50,6 @@ export const theme = {
 		'extra-bold': 800,
 		black: 900
 	},
-	lineHeights: {},
 	letterSpacings: {
 		tightest: '-.075em',
 		tighter: '-.05em',
@@ -79,24 +76,24 @@ export const theme = {
 		'h-max': '1440px'
 	},
 	borders: {
-		'hand-drawn-1': `1px solid #a5a7af`,
-		'hand-drawn-2': `2px solid #a5a7af`
+		sm: `1px solid #a5a7af`,
+		md: `2px solid #a5a7af`
 	},
 	borderWidths: {
-		'border-0': '0px',
-		'border-2': '2px',
-		'border-4': '4px',
-		'border-8': '8px',
-		border: '1px'
+		none: '0px',
+		xs: '1px',
+		sm: '2px',
+		md: '4px',
+		lg: '8px'
 	},
 	radii: {
-		'hand-drawn': '255px 15px 225px 15px/15px 225px 15px 255px',
-		'round-none': '0px',
-		'round-sm': '0.125rem' /* 2px */,
-		round: '0.25rem' /* 4px */,
-		'round-md': '0.375rem' /* 6px */,
-		'round-lg': '0.5rem' /* 8px */,
-		'round-fill': '9999px'
+		none: '0px',
+		xs: '0.125rem' /* 2px */,
+		sm: '0.25rem' /* 4px */,
+		md: '0.375rem' /* 6px */,
+		lg: '0.5rem' /* 8px */,
+		round: '50%',
+		'hand-drawn': '255px 15px 225px 15px/15px 225px 15px 255px'
 	},
 	shadows: {},
 	zIndices: {

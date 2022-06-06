@@ -80,7 +80,7 @@ export const Article = ({
 
 export default function ArticlesBody() {
 	return (
-		<main>
+		<div>
 			<Article
 				date="May 11 2022"
 				name="Name of the Article"
@@ -93,6 +93,6 @@ export default function ArticlesBody() {
 				link="https://es.lipsum.com/"
 				desc="El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo Contenido aquí, contenido aqu"
 			/>
-		</main>
+		</div>
 	);
 }

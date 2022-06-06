@@ -1,51 +1,74 @@
+import { Subtitle } from '@components/common';
 import styled, { css } from 'styled-components';
 
 const SkillsContainer = styled.div(
 	({ theme: t }) => css`
+		margin: ${t.space.lg} 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: ${t.space.sm};
 		text-align: center;
-		max-width: ${t.sizes['w-700']};
+		max-width: ${t.sizes['w-max']};
+
+		.group {
+			display: flex;
+			flex-direction: column;
+			gap: ${t.space.sm};
+			text-align: center;
+			flex-grow: 1;
+		}
 
 		.item {
 			flex-grow: 1;
 			padding: ${t.space.md};
 			border: 1px solid ${t.colors.border};
+			border-radius: ${t.radii.sm};
+			display: grid;
+			place-items: center;
 
 			:hover {
 				transition: all ${t.transitions.xFast} ease-in;
-				color: white;
 				background-color: ${t.colors['border']};
 			}
 		}
 
-		.item.more {
-			letter-spacing: 5px;
-			text-transform: lowercase;
+		.fill {
+			background-color: ${t.colors['border']};
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	`
 );
 
 export default function Skills() {
 	return (
-		<SkillsContainer>
-			<div className="item">HTML 5</div>
-			<div className="item">css 3</div>
-			<div className="item">Javascript</div>
-			<div className="item">Typescript</div>
-			<div className="item">Node Js</div>
-			<div className="item">React Js</div>
-			<div className="item">Next Js</div>
-			<div className="item">React Native</div>
-			<div className="item">Expo</div>
-			<div className="item">Redux</div>
-			<div className="item">Jest</div>
-			<div className="item">Storybook</div>
-			<div className="item">React Testing Libraries</div>
-			<div className="item">Styled Components</div>
-			<div className="item">Mantine UI</div>
-			<div className="item more">Learn when necessary</div>
-		</SkillsContainer>
+		<div>
+			<Subtitle>
+				<strong>Fundamental**</strong>
+			</Subtitle>
+			<SkillsContainer>
+				<div className="item fill">Javascript</div>
+				<div className="item fill">Typescript</div>
+				<div className="item fill">Node Js</div>
+				<div className="item fill">React Js</div>
+			</SkillsContainer>
+			<Subtitle>
+				<strong>ReactJs*</strong> based frameworks
+			</Subtitle>
+			<SkillsContainer>
+				<div className="item">Next Js</div>
+				<div className="group">
+					<div className="item">Expo</div>
+					<div className="item">React Native</div>
+				</div>
+				<div className="group">
+					<div className="item">Jest</div>
+					<div className="item">React Testing Libraries</div>
+					<div className="item">Storybook... </div>
+				</div>
+			</SkillsContainer>
+		</div>
 	);
 }

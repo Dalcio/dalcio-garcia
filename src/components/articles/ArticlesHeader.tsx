@@ -3,7 +3,7 @@ import { Title, Text, HeaderContainer } from '@components/common';
 export default function ArticlesHeader() {
 	return (
 		<HeaderContainer>
-			<Title type="big" underline>
+			<Title type="big" underline underlineColor="primary">
 				My articles
 			</Title>
 			<Text>
