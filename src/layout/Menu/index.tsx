@@ -20,7 +20,6 @@ export default function Menu() {
 					<MenuItem name="about" onSelect={handleIsOpen} />
 					<MenuItem name="works" onSelect={handleIsOpen} />
 					<MenuItem name="articles" onSelect={handleIsOpen} />
-					<div className="close-pane" onClick={handleIsOpen} />
 				</MenuContent>
 			)}
 		</div>

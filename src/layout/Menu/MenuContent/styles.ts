@@ -4,10 +4,10 @@ const scaleAn = keyframes`
 	0% {
 		transform: scale(0);
 	}
-	80% {		
+	80% {
 		transform: scale(1.1);
 	}
-	90% {		
+	90% {
 		transform: scale(1.05);
 	}
 	100% {
@@ -15,24 +15,46 @@ const scaleAn = keyframes`
 	}
 `;
 
-export const MenuContentContainer = styled.main`
-	min-height: 230px;
-	max-width: 330px;
+export const MenuContentContainer = styled.div`
+	position: relative;
 	position: absolute;
 
-	overflow-y: auto;
-	overflow-x: hidden;
+	${({ theme: { colors, space, transitions, radii } }) => css`
+		width: calc(100vw - 4 * ${space.lg} - ${space.md});
+		max-width: 340px;
+		top: calc(2 * ${space.lg});
 
-	${({ theme: { colors, space, transitions } }) => css`
-		animation: ${scaleAn} ${transitions.normal} ease-in;
-		transform-origin: top left;
-		width: calc(100% - 2 * ${space.md});
-		top: ${space.lg};
-		background: ${colors.menu};
-		padding: ${space.md};
-		padding-top: calc(3 * ${space.md});
+		.container {
+			min-height: 230px;
+			position: relative;
 
-		z-index: 100;
+			overflow-y: auto;
+			overflow-x: hidden;
+
+			animation: ${scaleAn} ${transitions.normal} ease-in;
+			transform-origin: top left;
+
+			border-radius: ${radii.sm};
+			background: ${colors.secondaryBackground};
+			z-index: 10;
+			width: 100%;
+			padding: ${space.md};
+			padding-top: calc(3 * ${space.md});
+		}
+
+		.back-container {
+			animation: ${scaleAn} ${transitions.normal} ease-in;
+			transform-origin: top left;
+
+			position: absolute;
+			content: '';
+			height: 100%;
+			width: 100%;
+			background: #fff;
+			border-radius: ${radii.sm};
+			right: -${space.md};
+			bottom: -${space.md};
+		}
 	`}
 `;
 

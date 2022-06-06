@@ -2,7 +2,6 @@ export const theme = {
 	colors: {
 		text: '#000',
 		primary: '#3f3f3f',
-		// border: '#a5a7af',
 		border: '#83C9F4',
 		menu: '#e1efd8',
 
@@ -17,6 +16,7 @@ export const theme = {
 		onSecondaryBackground: '#000'
 	},
 	space: {
+		xs: '2px',
 		sm: '5px',
 		md: '10px',
 		lg: '15px'

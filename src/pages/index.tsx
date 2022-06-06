@@ -1,4 +1,5 @@
 import { HomeBody, HomeHeader } from '@components/home';
+import { GetStaticProps } from 'next';
 
 import Head from 'next/head';
 
@@ -17,3 +18,19 @@ export default function HomePage() {
 		</>
 	);
 }
+
+export const getStaticProps: GetStaticProps = () => {
+	const projects = [{ a: 'as' }];
+	const articles = [{ a: ' as' }];
+
+	console.log('just runs************************');
+
+	return {
+		props: {
+			data: {
+				projects,
+				articles
+			}
+		}
+	};
+};

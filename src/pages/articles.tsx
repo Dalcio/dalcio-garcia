@@ -1,4 +1,5 @@
 import { ArticlesBody, ArticlesHeader } from '@components/articles';
+import { GetStaticProps } from 'next';
 
 import Head from 'next/head';
 
@@ -17,3 +18,15 @@ export default function ArticlesPage() {
 		</>
 	);
 }
+
+export const getStaticProps: GetStaticProps = () => {
+	const articles = [{ a: ' as' }];
+
+	console.log('just runs************************');
+
+	return {
+		props: {
+			articles
+		}
+	};
+};

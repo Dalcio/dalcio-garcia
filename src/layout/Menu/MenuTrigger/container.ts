@@ -7,7 +7,9 @@ import createSpanAnDelay from './createSpanAnDelay';
 
 const btnCloseCss = (theme: Theme) => css`
 	& > .btn-close {
-		margin-top: calc(${theme.space.lg} + ${theme.space.md} - 2px);
+		position: absolute;
+
+		margin-top: ${theme.space.md};
 		margin-left: calc(${theme.space.lg} + ${theme.space.md} - 2px);
 		z-index: 110;
 
@@ -18,14 +20,14 @@ const btnCloseCss = (theme: Theme) => css`
 		transition: all ${theme.transitions.xFast} ease-in;
 
 		&:hover {
-			font-size: 14px;
 			border-bottom: 2px solid ${theme.colors.text};
 		}
 
-		& > span {
+		/* & > span {
 			display: inline-block;
-			animation: ${aperLetter} ${theme.transitions.fast} ease-in-out;
-		}
+			animation: ${aperLetter} ${theme.transitions.fast} ease-in-out
+				${theme.transitions.fast};
+		} */
 
 		${createSpanAnDelay()}
 	}
@@ -83,7 +85,7 @@ const MenuTriggerContainer = styled.button`
 		.close-pane {
 			position: fixed;
 			background: ${theme.colors.primary};
-			inset: calc(2 * ${theme.space.md});
+			inset: 0;
 			opacity: 0.4;
 		}
 
