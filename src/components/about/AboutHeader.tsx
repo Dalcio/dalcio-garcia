@@ -7,10 +7,10 @@ export default function AboutHeader() {
 				Who's Dálcio Garcia?
 			</Title>
 			<Text>
-				Dálcio is a creative front-end <strong>mobile</strong> and{' '}
-				<strong>web</strong> developer.
+				Dálcio is a creative junior Software Engineer, with{' '}
+				<strong>1+ years</strong> of experiences.
 			</Text>
-			<Button bg="about">
+			<Button>
 				<a href="/dalcio.pdf" download="dalcio">
 					See My Resume
 				</a>

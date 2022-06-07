@@ -9,7 +9,7 @@ export default function HomeHeader() {
 				<div className="bg" />
 			</div>
 			<div className="greetings">
-				<Title>HI! my name is</Title>
+				<Title>Whatsapp bro! I'm</Title>
 				<Title type="big">Dálcio Garcia.</Title>
 			</div>
 			<Subtitle className="self-intro">

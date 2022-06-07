@@ -2,7 +2,7 @@ import { Text, Title } from '@components/common';
 
 import { AboutBodyContainer } from './styles';
 
-import Skills from './SKills';
+import Skills, { SkillsContainer } from './SKills';
 
 export default function AboutBody() {
 	return (
@@ -30,6 +30,13 @@ export default function AboutBody() {
 				Skills and Experiences
 			</Title>
 			<Skills />
+			<Title type="small" className="section-head">
+				Languages
+			</Title>
+			<SkillsContainer>
+				<div className="item fill">Native Portuguese</div>
+				<div className="item">Conversational English</div>
+			</SkillsContainer>
 			<Title type="small" className="section-head">
 				Hobbies
 			</Title>

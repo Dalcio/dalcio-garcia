@@ -1,7 +1,7 @@
 import { Subtitle } from '@components/common';
 import styled, { css } from 'styled-components';
 
-const SkillsContainer = styled.div(
+export const SkillsContainer = styled.div(
 	({ theme: t }) => css`
 		margin: ${t.space.lg} 0;
 		display: flex;
