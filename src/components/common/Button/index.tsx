@@ -55,9 +55,11 @@ const ButtonContainer = styled.button`
 
 			display: grid;
 			place-items: center;
+
 			& > * {
 				display: block;
-			}
+				width: 100%;
+				color: pink: !important;;			}
 		}
 	`}
 `;

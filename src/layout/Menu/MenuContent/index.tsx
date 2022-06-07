@@ -10,10 +10,10 @@ export default function MenuContent({ children }) {
 			<div className="container">
 				<Header>
 					<a href="https://linkedin.com/in/dalcio-garcia/" target="_bllank">
-						<BsLinkedin />
+						<BsLinkedin /> Dalcio
 					</a>
 					<a href="https://github.com/dalcio" target="_bllank">
-						<BsGithub />
+						<BsGithub /> @dalcio
 					</a>
 				</Header>
 				<MenuNav>{children}</MenuNav>

@@ -19,15 +19,10 @@ export const HomeBodyContainer = styled.div`
 		& > .awesome-things {
 			margin-top: calc(4 * ${space.lg});
 
-			.awesome-intro {
-				max-width: ${sizes['w-max']};
-				margin-top: ${space.lg};
-				margin-bottom: calc(2 * ${space.lg});
-			}
-
 			.the-things {
 				display: grid;
 				row-gap: calc(2 * ${space.lg});
+				margin-top: calc(2 * ${space.lg});
 
 				& > .article-from-home {
 					${media.bp1} {

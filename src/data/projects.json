@@ -1,0 +1,38 @@
+[
+	{
+		"id": 0,
+		"date": "Jan, 21 2022",
+		"name": "First Project",
+		"role": "I did it and that",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+		"live": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg"
+	},
+	{
+		"id": 1,
+		"date": "Jan, 21 2022",
+		"name": "First Project 2",
+		"role": "I did it and that",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+		"github": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg",
+		"live": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg"
+	},
+	{
+		"id": 2,
+		"date": "Jan, 21 2022",
+		"name": "First Project 3",
+		"role": "I did it and that",
+		"stack": "Next JS, Typescript, Jotai, Mantine UI, ...",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+		"github": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg"
+	},
+	{
+		"id": 3,
+		"date": "Jan, 21 2022",
+		"name": "First Project 4",
+		"role": "I did it and that",
+		"stack": "Next JS, Typescript, Jotai, Mantine UI, ...",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+		"github": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg",
+		"live": "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/110/2021/07/Aliche-_-Google-Images2-scaled.jpg"
+	}
+]

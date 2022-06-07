@@ -16,16 +16,16 @@ const scaleAn = keyframes`
 `;
 
 export const MenuContentContainer = styled.div`
-	position: relative;
 	position: absolute;
 
 	${({ theme: { colors, space, transitions, radii } }) => css`
-		width: calc(100vw - 4 * ${space.lg} - ${space.md});
-		max-width: 340px;
+		width: calc(100% - 4 * ${space.lg} - ${space.md});
+		height: calc(100vh - 4 * ${space.lg});
 		top: calc(2 * ${space.lg});
 
 		.container {
-			min-height: 230px;
+			height: 100%;
+			width: 100%;
 			position: relative;
 
 			overflow-y: auto;
@@ -37,7 +37,6 @@ export const MenuContentContainer = styled.div`
 			border-radius: ${radii.sm};
 			background: ${colors.secondaryBackground};
 			z-index: 10;
-			width: 100%;
 			padding: ${space.md};
 			padding-top: calc(3 * ${space.md});
 		}
@@ -60,17 +59,30 @@ export const MenuContentContainer = styled.div`
 
 export const Header = styled.header`
 	${({ theme }) => css`
-		margin-top: calc(3 * ${theme.space.md});
+		margin-top: calc(5 * ${theme.space.md});
 
 		a {
 			margin-left: ${theme.space.md};
 			color: ${theme.colors.text};
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
 			font-size: 20px;
 			cursor: pointer;
+			column-gap: ${theme.space.sm};
+			text-decoration: none;
+
+			& > * {
+				display: inline-block;
+			}
 
 			:last-of-type {
 				margin-left: calc(2 * ${theme.space.md});
+			}
+
+			:hover {
+				color: ${theme.colors.blue[0]};
+				text-decoration: underline;
+				font-style: italic;
 			}
 		}
 	`};

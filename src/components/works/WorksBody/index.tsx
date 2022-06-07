@@ -1,6 +1,8 @@
 import { Button, Title } from '@components/common';
+import projects from '@data/projects.json';
 import styled, { css } from 'styled-components';
-import ProjectView from './ProjectView';
+
+import ProjectView, { ProjectViewProps } from './ProjectView';
 
 const WorksBodyContainer = styled.div(
 	({ theme: { space, sizes, media } }) => css`
@@ -36,32 +38,16 @@ export default function WorksBody() {
 				Some Things that I've Built
 			</Title>
 			<div className="projects">
-				<ProjectView
-					name="Project Name"
-					desc="vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. "
-					github="https://github.com/dalcio"
-					page="https://linkedin.com/in/dalcio"
-					stack="React, styled components, ...."
-					date="June, 10 2022"
-				/>
-				<ProjectView
-					name="Project Name"
-					desc="vero eos et accusamus et iusto odio dignissimos"
-					github="https://github.com/dalcio"
-					page="https://linkedin.com/in/dalcio"
-					date="June, 10 2022"
-				/>
-				<ProjectView
-					name="Project Name"
-					desc="vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. "
-					github="https://github.com/dalcio"
-					page="https://linkedin.com/in/dalcio"
-					stack="React, styled components, ...."
-					date="June, 10 2022"
-				/>
+				{projects && (
+					<>
+						{projects.map(({ id, ...project }) => (
+							<ProjectView {...(project as ProjectViewProps)} key={id} />
+						))}
+					</>
+				)}
 			</div>
 			<a href="https://github.com/dalcio/" target="blank">
-				<Button bg="works">View More onGithub</Button>
+				<Button>View More onGithub</Button>
 			</a>
 		</WorksBodyContainer>
 	);

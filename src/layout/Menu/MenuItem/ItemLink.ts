@@ -5,17 +5,21 @@ const ItemLink = styled.a`
 	display: inline-block;
 	letter-spacing: 4px;
 	font-size: 1.5rem;
-
-	&:hover:not(.is-active) {
-		opacity: 0.6;
-	}
+	width: 100%;
 
 	& > span:first-of-type {
 		text-transform: capitalize;
 	}
 
 	${({ theme: { colors, transitions, space, media, radii } }) => css`
-		transition: font-size ${transitions.fast} ease-in;
+		transition: all ${transitions.fast} ease;
+
+		&:hover:not(.is-active) {
+			opacity: 0.6;
+			background: ${colors.blue[0]};
+			padding-left: ${space.md};
+			border-radius: ${radii.sm};
+		}
 
 		${media.bp1} {
 			font-size: 1.9rem;
@@ -23,7 +27,6 @@ const ItemLink = styled.a`
 
 		&.is-active {
 			cursor: unset;
-			width: 100%;
 			background: ${colors.blue[0]};
 			padding-left: ${space.md};
 			border-radius: ${radii.sm};
