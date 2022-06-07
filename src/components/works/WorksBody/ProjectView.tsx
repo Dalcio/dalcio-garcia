@@ -9,6 +9,7 @@ export type ProjectViewProps = {
 	date: string;
 	stack?: string;
 	role?: string;
+	platform?: string;
 	className?: string | 'home';
 };
 
@@ -20,6 +21,24 @@ export const ProjectViewContainer = styled.div(
 		gap: ${t.space.md};
 		border: 1px solid transparent;
 		transition: all ${t.transitions.xFast} ease-in;
+
+		.head {
+			position: relative;
+
+			& > .platform {
+				position: absolute;
+				font-size: ${t.fontSizes.xs};
+				padding: ${t.space.sm} ${t.space.md};
+				border-radius: ${t.radii.sm};
+				background: ${t.colors.border};
+				top: ${t.space.sm};
+				right: 0;
+
+				@media (hover: hover) {
+					background: ${t.colors.white};
+				}
+			}
+		}
 
 		.desc {
 			flex-grow: 1;
@@ -48,12 +67,21 @@ export const ProjectViewContainer = styled.div(
 			grid-template-areas:
 				'head desc'
 				'head desc'
-				'empty btns';
+				'head btns';
 			grid-template-columns: 0.4fr 0.6fr;
 			grid-template-rows: auto 1fr auto;
 
 			.head {
 				grid-area: head;
+				position: relative;
+				height: 100%;
+
+				& > .platform {
+					top: unset;
+					right: unset;
+					bottom: ${t.space.sm};
+					left: ${t.space.sm};
+				}
 			}
 
 			.desc {
@@ -79,6 +107,12 @@ export const ProjectViewContainer = styled.div(
 			padding: calc(2 * ${t.space.md});
 			border-color: ${t.colors.border};
 			border-radius: ${t.radii.sm};
+
+			.head {
+				& > .platform {
+					background: ${t.colors.border};
+				}
+			}
 		}
 	`
 );
@@ -89,6 +123,7 @@ export default function ProjectView({
 	date,
 	github,
 	live,
+	platform,
 	role,
 	stack,
 	className
@@ -100,6 +135,7 @@ export default function ProjectView({
 				<Title type="small" className="title">
 					{name}
 				</Title>
+				{platform && <div className="platform">{platform}</div>}
 			</div>
 			<div className="desc">
 				<div>{desc}</div>
