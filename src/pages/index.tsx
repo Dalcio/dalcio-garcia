@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = () => {
 		props: {
 			data: {
 				projects,
-				articles
+				articles: articles.reverse()
 			}
 		}
 	};
