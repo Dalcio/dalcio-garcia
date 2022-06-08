@@ -18,8 +18,9 @@ const scaleAn = keyframes`
 export const MenuContentContainer = styled.div`
 	position: absolute;
 
-	${({ theme: { colors, space, transitions, radii } }) => css`
+	${({ theme: { colors, space, transitions, radii, sizes } }) => css`
 		width: calc(100% - 4 * ${space.lg} - ${space.md});
+		max-width: ${sizes['w-max']};
 		height: calc(100vh - 4 * ${space.lg});
 		top: calc(2 * ${space.lg});
 
