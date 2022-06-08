@@ -16,6 +16,9 @@ export const SkillsContainer = styled.div(
 			gap: ${t.space.sm};
 			text-align: center;
 			flex-grow: 1;
+			padding: ${t.space.md};
+			border: 1px solid ${t.colors.border};
+			border-radius: ${t.radii.sm};
 		}
 
 		.item {
@@ -34,6 +37,11 @@ export const SkillsContainer = styled.div(
 
 		.fill {
 			background-color: ${t.colors['border']};
+			:hover {
+				transition: all ${t.transitions.xFast} ease-in;
+				background-color: #fff;
+				border-color: #fff;
+			}
 		}
 
 		&:last-of-type {
