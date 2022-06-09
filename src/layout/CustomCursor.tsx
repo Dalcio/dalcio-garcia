@@ -25,7 +25,7 @@ export default function CustomCursor() {
 			if (cursorRef.current) {
 				const { clientX, clientY } = e;
 				const mouseX = clientX + 4;
-				const mouseY = clientY +4;
+				const mouseY = clientY + 4;
 				cursorRef.current.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 			}
 		});

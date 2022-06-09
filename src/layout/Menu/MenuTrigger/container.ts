@@ -25,7 +25,8 @@ const btnCloseCss = (theme: Theme) => css`
 
 		/* & > span {
 			display: inline-block;
-			animation: ${aperLetter} ${theme.transitions.fast} ease-in-out
+			animation: ${aperLetter} ${theme
+			.transitions.fast} ease-in-out
 				${theme.transitions.fast};
 		} */
 

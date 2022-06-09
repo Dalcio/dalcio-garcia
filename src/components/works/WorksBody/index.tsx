@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import ProjectView, { ProjectViewProps } from './ProjectView';
 
 const WorksBodyContainer = styled.div(
-	({ theme: { space, sizes, media } }) => css`
+	({ theme: { space, sizes } }) => css`
 		display: grid;
 		align-content: center;
 		row-gap: calc(2 * ${space.md});

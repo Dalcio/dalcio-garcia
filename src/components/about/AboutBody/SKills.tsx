@@ -31,12 +31,12 @@ export const SkillsContainer = styled.div(
 
 			:hover {
 				transition: all ${t.transitions.xFast} ease-in;
-				background-color: ${t.colors['border']};
+				background-color: ${t.colors.border};
 			}
 		}
 
 		.fill {
-			background-color: ${t.colors['border']};
+			background-color: ${t.colors.border};
 			:hover {
 				transition: all ${t.transitions.xFast} ease-in;
 				background-color: #fff;

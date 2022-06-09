@@ -1,10 +1,7 @@
-import ROUTES, { Routes } from '@constants/routes';
 import styled, { css } from 'styled-components';
 
 const ButtonContainer = styled.button`
-	${({
-		theme: { colors, radii, space, borders, transitions, letterSpacings }
-	}) => css`
+	${({ theme: { colors, radii, space, transitions, letterSpacings } }) => css`
 		background: none;
 		cursor: pointer;
 		outline: none;
@@ -64,7 +61,11 @@ const ButtonContainer = styled.button`
 	`}
 `;
 
-const Button = ({ children }) => (
+interface Props {
+	children: JSX.Element[] | JSX.Element | string;
+}
+
+const Button = ({ children }: Props) => (
 	<ButtonContainer>
 		<div className="btn-content">{children}</div>
 	</ButtonContainer>

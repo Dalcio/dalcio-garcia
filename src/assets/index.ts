@@ -1,1 +1,1 @@
-export { default as DalcioAvatarSVG } from "./dalcio.svg";
+export { default as DalcioAvatarSVG } from './dalcio.svg';

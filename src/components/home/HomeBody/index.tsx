@@ -24,9 +24,7 @@ export default function HomeBody({ articles, projects }: HomeBodyProps) {
 				of <strong>web</strong> and <strong>mobile</strong> apps.
 			</Subtitle>
 			<div className="intro">
-				<Title underline color="2">
-					Let´s build something awesome together.
-				</Title>
+				<Title underline>Let´s build something awesome together.</Title>
 				<div className="intro-content">
 					<Text>
 						From mobile app to web app, desktop app or{' '}

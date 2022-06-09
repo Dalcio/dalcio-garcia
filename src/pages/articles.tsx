@@ -1,5 +1,4 @@
 import { ArticlesBody, ArticlesHeader } from '@components/articles';
-import { GetStaticProps } from 'next';
 
 import Head from 'next/head';
 

@@ -18,7 +18,7 @@ export const HomeHeaderContainer = styled.div(
 				min-width: 70%;
 				bottom: 0;
 				left: calc(15%);
-				background: ${colors.menu};
+				background: ${colors.white};
 				transform: skew(-8deg, -8deg);
 				border-radius: ${radii['round-sm']};
 			}
