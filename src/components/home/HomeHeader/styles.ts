@@ -1,4 +1,27 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const avanimation = keyframes`
+	0% {
+		transform: skew(-8deg, -8deg);
+	}
+
+	25% {
+		border-radius: 0;
+	}
+	
+	50% {
+		transform: skew(0deg, 0deg);
+	}
+	
+	75% {
+		border-radius: 20px;
+	}
+
+	100% {
+		transform: skew(8deg, 8deg);
+		
+	}
+`;
 
 export const HomeHeaderContainer = styled.div(
 	({ theme: { space, radii, colors, media } }) => css`
@@ -21,6 +44,7 @@ export const HomeHeaderContainer = styled.div(
 				background: ${colors.white};
 				transform: skew(-8deg, -8deg);
 				border-radius: ${radii['round-sm']};
+				animation: ${avanimation} 1.3s linear infinite alternate both;
 			}
 
 			#avatar {

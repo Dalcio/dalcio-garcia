@@ -2,6 +2,7 @@
 	{
 		"id": 0,
 		"name": "Mochi Website",
+		"cover": "/desktop-preview.jpg",
 		"platform": "Web and mobile",
 		"role": "I built and app and wrote unit tests",
 		"stack": "Next JS, Typescript, Jest, Storybook, Node js, Ramda,...",
@@ -11,6 +12,7 @@
 	{
 		"id": 2,
 		"date": "development",
+		"cover": "/desktop-preview.jpg",
 		"name": "Task Tracker",
 		"role": "I was responsible for the hole project",
 		"stack": "Next JS, Typescript, Jotai, Mantine UI, ...",

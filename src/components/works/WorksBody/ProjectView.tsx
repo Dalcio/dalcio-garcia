@@ -10,6 +10,7 @@ export type ProjectViewProps = {
 	stack?: string;
 	role?: string;
 	platform?: string;
+	cover?: string;
 	className?: string | 'home';
 };
 
@@ -38,6 +39,20 @@ export const ProjectViewContainer = styled.div(
 					background: ${t.colors.white};
 				}
 			}
+
+			.cover {
+				width: 100%;
+				height: 200px;
+				border-radius: ${t.radii.sm};
+				overflow: hidden;
+
+				& > img {
+					transition: transform ${t.transitions.xFast} ease-in;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
 		}
 
 		.desc {
@@ -63,7 +78,7 @@ export const ProjectViewContainer = styled.div(
 
 		${t.media.bp1} {
 			display: grid;
-			gap: ${t.space.md};
+			gap: ${t.space.lg};
 			grid-template-areas:
 				'head desc'
 				'head desc'
@@ -112,6 +127,10 @@ export const ProjectViewContainer = styled.div(
 				& > .platform {
 					background: ${t.colors.border};
 				}
+
+				& > .cover > img {
+					transform: scale(1.2);
+				}
 			}
 		}
 	`
@@ -126,6 +145,7 @@ export default function ProjectView({
 	platform,
 	role,
 	stack,
+	cover,
 	className
 }: ProjectViewProps) {
 	return (
@@ -135,6 +155,11 @@ export default function ProjectView({
 				<Title type="small" className="title">
 					{name}
 				</Title>
+				{cover && (
+					<div className="cover">
+						<img src={cover} alt={name} />
+					</div>
+				)}
 				{platform && <div className="platform">{platform}</div>}
 			</div>
 			<div className="desc">
