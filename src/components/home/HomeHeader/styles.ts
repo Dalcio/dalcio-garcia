@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-const avanimation = keyframes`
+const avAnimation = keyframes`
 	0% {
 		transform: skew(-8deg, -8deg);
 	}
@@ -23,7 +23,7 @@ const avanimation = keyframes`
 	}
 `;
 
-const avanimation_before = keyframes`
+const avAnimationBefore = keyframes`
 	25% {
 		border-radius: 0;
 	}
@@ -54,14 +54,14 @@ export const HomeHeaderContainer = styled.div(
 				background: ${colors.white};
 				transform: skew(-8deg, -8deg);
 				border-radius: ${radii['round-sm']};
-				animation: ${avanimation} 1.3s linear infinite alternate both;
+				animation: ${avAnimation} 1.3s linear infinite alternate both;
 
 				&: after {
 					content: '';
 					position: absolute;
 					background: transparent;
 					border: 1px solid ${colors.white};
-					animation: ${avanimation_before} 1.3s linear infinite alternate both;
+					animation: ${avAnimationBefore} 1.3s linear infinite alternate both;
 					border-left: unset;
 					border-radius: 20px;
 					width: 100%;
