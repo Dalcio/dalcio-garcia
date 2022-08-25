@@ -28,7 +28,7 @@
 		"stack": "Angular, Typescript",
 		"desc": "Filter the jobs by category",
 		"github": "https://github.com/Dalcio/static-job-listings.git",
-		"live": "https://new-task-tracker.vercel.app/"
+		"live": "https://static-job-listings-umber.vercel.app/"
 	},
 	{
 		"id": 3,
