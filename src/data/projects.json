@@ -1,13 +1,14 @@
 [
 	{
 		"id": 0,
-		"name": "Mochi Website",
-		"cover": "/desktop-preview.jpg",
-		"platform": "Web and mobile",
-		"role": "I built and app and wrote unit tests",
-		"stack": "Next JS, Typescript, Jest, Storybook, Node js, Ramda,...",
-		"desc": "A food and beverage delivery platform.",
-		"github": "https://github.com/ilovemochi/mochi-website"
+		"name": "Easy Bank Challenge",
+		"cover": "https://raw.githubusercontent.com/Dalcio/easy-bank/main/screnshots/cover.png",
+		"platform": "Responsive Web Site",
+		"role": "I built the hole landing page",
+		"stack": "Angular, Typescript",
+		"desc": "This is a solution to the Easybank landing page challenge on Frontend Mentor",
+		"github": "https://github.com/Dalcio/easy-bank",
+		"live": "https://easy-bank-tau.vercel.app/"
 	},
 	{
 		"id": 2,

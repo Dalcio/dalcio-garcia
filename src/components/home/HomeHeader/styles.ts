@@ -50,7 +50,7 @@ export const HomeHeaderContainer = styled.div(
 				height: 10rem;
 				min-width: 70%;
 				bottom: 0;
-				left: calc(15%);
+				left: 15%;
 				background: ${colors.white};
 				transform: skew(-8deg, -8deg);
 				border-radius: ${radii['round-sm']};
@@ -62,12 +62,8 @@ export const HomeHeaderContainer = styled.div(
 					background: transparent;
 					border: 1px solid ${colors.white};
 					animation: ${avAnimationBefore} 1.3s linear infinite alternate both;
-					border-left: unset;
 					border-radius: 20px;
-					width: 100%;
-					bottom: -${space.md};
-					top: -${space.md};
-					right: -${space.md};
+					inset: -${space.md};
 				}
 			}
 
@@ -119,6 +115,8 @@ export const HomeHeaderContainer = styled.div(
 			.self-intro {
 				grid-area: self-intro;
 				align-self: start;
+				position: 'relative';
+				z-index: 1;
 			}
 		}
 

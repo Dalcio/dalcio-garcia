@@ -49,6 +49,7 @@ export default class MyDocument extends Document {
 						crossOrigin="true"
 					/>
 					<link rel="stylesheet" href="fonts/Roboto.ttf" />
+					<link rel="shortcut icon" href="/dalcio.svg" type="image/x-icon" />
 				</Head>
 				<body>
 					<Main />
