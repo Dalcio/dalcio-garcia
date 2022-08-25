@@ -11,7 +11,27 @@
 		"live": "https://easy-bank-tau.vercel.app/"
 	},
 	{
+		"id": 1,
+		"cover": "https://raw.githubusercontent.com/Dalcio/launch-countdown-timer/main/screenshots/countdown-timer.png",
+		"name": "Launch Countdown Timer",
+		"role": "I was responsible for the hole front-end of the project",
+		"stack": "Angular, Typescript",
+		"desc": "A countdown timer is a virtual clock that counts down from a certain number or date to indicate the beginning or end of an event or offer.",
+		"github": "https://github.com/Dalcio/launch-countdown-timer",
+		"live": "https://launch-countdown-timer-nine-tau.vercel.app/"
+	},
+	{
 		"id": 2,
+		"cover": "https://raw.githubusercontent.com/Dalcio/static-job-listings/main/screenshots/cover.png",
+		"name": "Job listings with filtering solution",
+		"role": "I built the Frontend for filtering jobs",
+		"stack": "Angular, Typescript",
+		"desc": "Filter the jobs by category",
+		"github": "https://github.com/Dalcio/static-job-listings.git",
+		"live": "https://new-task-tracker.vercel.app/"
+	},
+	{
+		"id": 3,
 		"date": "development",
 		"cover": "/desktop-preview.jpg",
 		"name": "Task Tracker",
