@@ -21,7 +21,7 @@ export const MenuContentContainer = styled.div`
 	${({ theme: { colors, space, transitions, radii, sizes } }) => css`
 		width: calc(100% - 4 * ${space.lg} - ${space.md});
 		max-width: ${sizes['w-max']};
-		height: calc(100vh - 4 * ${space.lg});
+		height: calc(100vh - 5 * ${space.lg});
 		top: calc(2 * ${space.lg});
 
 		.container {

@@ -47,7 +47,7 @@ export default function WorksBody() {
 				)}
 			</div>
 			<a href="https://github.com/dalcio/" target="blank">
-				<Button>View More onGithub</Button>
+				<Button>View More on Github</Button>
 			</a>
 		</WorksBodyContainer>
 	);

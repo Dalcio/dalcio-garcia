@@ -49,19 +49,13 @@ const HireMeContainer = styled('a')(
 			border: 1px solid #fff;
 			border-radius: ${t.radii.lg};
 			background: ${t.colors.blue[1]};
+
+			@media screen and (max-width: 400px) {
+				display: none;
+			}
 		}
 
 		:hover {
-			/* .label {
-				letter-spacing: 3px;
-				transition: all 200ms ease-in-out;
-			} */
-
-			/* div {
-				transform: scale(1.2);
-				transform-origin: center;
-				transition: all 200ms ease-in-out;
-			} */
 			.ico {
 				transform: scale(1.2);
 				transform-origin: center;

@@ -13,7 +13,7 @@ type MenuItemProps = {
 
 const Li = styled.li(
 	({ theme: { colors, space, radii } }) => css`
-		margin: 6px 0;
+		margin: 6px 6px 6px 0;
 
 		&.li-is-active {
 			position: relative;

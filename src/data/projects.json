@@ -32,6 +32,17 @@
 	},
 	{
 		"id": 3,
+		"date": "August 29, 2022 - August 29, 2022",
+		"cover": "https://raw.githubusercontent.com/Dalcio/rock-paper-scissors/main/screenshots/desktop-home-preview.png",
+		"name": "Rock, Paper, Scissors, Lizard and Spock",
+		"role": "I built this game",
+		"stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
+		"desc": "Rock Paper Scissors Lizard Spock is an extension of the classic game of chance, Rock Paper Scissors, created by Sam Kass and Karen Bryla.",
+		"github": "https://github.com/Dalcio/rock-paper-scissors",
+		"live": "https://rock-paper-scissors-flax-eight.vercel.app/"
+	},
+	{
+		"id": 4,
 		"date": "development",
 		"cover": "/desktop-preview.jpg",
 		"name": "Task Tracker",

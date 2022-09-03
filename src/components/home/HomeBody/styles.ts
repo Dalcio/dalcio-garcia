@@ -32,6 +32,7 @@ export const HomeBodyContainer = styled.div`
 				}
 			}
 		}
+
 		@media screen and (min-width: 400px) {
 			.self-intro {
 				display: none;

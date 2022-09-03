@@ -24,16 +24,16 @@ export const ProjectViewContainer = styled.div(
 		transition: all ${t.transitions.xFast} ease-in;
 
 		.head {
-			position: relative;
+			display: flex;
+			flex-direction: column;
 
 			& > .platform {
-				position: absolute;
+				align-self: start;
 				font-size: ${t.fontSizes.xs};
 				padding: ${t.space.sm} ${t.space.md};
+				margin: ${t.space.md} 0;
 				border-radius: ${t.radii.sm};
 				background: ${t.colors.border};
-				top: ${t.space.sm};
-				right: 0;
 
 				@media (hover: hover) {
 					background: ${t.colors.white};
@@ -74,6 +74,11 @@ export const ProjectViewContainer = styled.div(
 				flex-grow: 1;
 				width: 100%;
 			}
+
+			@media screen and (max-width: 400px) {
+				row-gap: ${t.space.lg};
+				flex-direction: column;
+			}
 		}
 
 		${t.media.bp1} {
@@ -88,15 +93,6 @@ export const ProjectViewContainer = styled.div(
 
 			.head {
 				grid-area: head;
-				position: relative;
-				height: 100%;
-
-				& > .platform {
-					top: unset;
-					right: unset;
-					bottom: ${t.space.sm};
-					left: ${t.space.sm};
-				}
 			}
 
 			.desc {
@@ -124,7 +120,7 @@ export const ProjectViewContainer = styled.div(
 			border-radius: ${t.radii.sm};
 
 			.head {
-				& > .platform {
+				.platform {
 					background: ${t.colors.border};
 				}
 
@@ -155,12 +151,12 @@ export default function ProjectView({
 				<Title type="small" className="title">
 					{name}
 				</Title>
+				{platform && <div className="platform">{platform}</div>}
 				{cover && (
 					<div className="cover">
 						<img src={cover} alt={name} />
 					</div>
 				)}
-				{platform && <div className="platform">{platform}</div>}
 			</div>
 			<div className="desc">
 				<div>{desc}</div>
