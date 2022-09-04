@@ -43,6 +43,17 @@
 	},
 	{
 		"id": 4,
+		"date": "September 01, 2022 - September 02, 2022",
+		"cover": "https://raw.githubusercontent.com/Dalcio/advice-generator-app/main/screenshots/desktop-preview.png",
+		"name": "Advice Generator App",
+		"role": "I built this advice generator consuming the Advice Slip JSON API",
+		"stack": "Next JS, Typescript, Stiches",
+		"desc": "Advice Generator App allows the user to see random advice",
+		"github": "https://github.com/Dalcio/advice-generator-app",
+		"live": "https://get-advice.vercel.app/"
+	},
+	{
+		"id": 20,
 		"date": "development",
 		"cover": "/desktop-preview.jpg",
 		"name": "Task Tracker",
