@@ -64,6 +64,17 @@
 		"live": "https://world-nations-info.vercel.app/"
 	},
 	{
+		"id": 6,
+		"date": "September 10, 2022 - September 17, 2022",
+		"cover": "https://raw.githubusercontent.com/Dalcio/url-shortening/main/screenshots/visible-part.png",
+		"name": "WUrl Shortening",
+		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+		"stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
+		"desc": "Shortify your link in a click with url shortening..",
+		"github": "https://github.com/Dalcio/url-shortening",
+		"live": "https://link-shortening.vercel.app/"
+	},
+	{
 		"id": 20,
 		"date": "development",
 		"cover": "/desktop-preview.jpg",
