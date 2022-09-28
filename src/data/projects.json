@@ -86,6 +86,17 @@
 		"live": "https://track-this-ip-address.vercel.app/"
 	},
 	{
+		"id": 8,
+		"date": "",
+		"cover": "https://raw.githubusercontent.com/Dalcio/beautiful-to-do/main/screenshots/cover.png",
+		"name": "Beautiful Todo App",
+		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+		"stack": "Next JS, Typescript, Zustand, Mantine UI, Beautiful React Drag and Drop ...",
+		"desc": "To Do is a task management app to help you stay organized and manage your day-to-day",
+		"github": "https://github.com/Dalcio/beautiful-to-do",
+		"live": "http://beautiful-to-do.vercel.app/"
+	},
+	{
 		"id": 20,
 		"date": "development",
 		"cover": "/desktop-preview.jpg",
